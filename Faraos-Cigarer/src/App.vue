@@ -1,11 +1,11 @@
 <script setup>
-import Header from './components/Header.vue'
+import Header from "./components/Header.vue";
+import Slideshow from "./components/Slideshow.vue";
 </script>
 
 <template>
-<Header></Header>
+  <Header></Header>
+  <Slideshow></Slideshow>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
