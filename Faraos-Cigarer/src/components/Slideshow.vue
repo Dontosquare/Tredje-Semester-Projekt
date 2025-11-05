@@ -4,6 +4,7 @@ import { ref, onMounted } from "vue";
 const slideIndex = ref(1);
 let slides = [];
 let dots = [];
+let autoSlideInterval = null;
 
 function showSlides(n) {
   if (n > slides.length) slideIndex.value = 1;
@@ -28,6 +29,13 @@ onMounted(() => {
   slides = Array.from(document.getElementsByClassName("mySlides"));
   dots = Array.from(document.getElementsByClassName("dot"));
   showSlides(slideIndex.value);
+  autoSlideInterval = setInterval(() => {
+    plusSlides(1);
+  }, 5000);
+});
+
+onBeforeUnmount(() => {
+  clearInterval(autoSlideInterval);
 });
 </script>
 
@@ -48,7 +56,6 @@ onMounted(() => {
       <img src="../assets/image/mobil_slideshow_3.webp" />
     </div>
 
-    <!-- ✅ Use Vue event bindings -->
     <a class="prev" @click="plusSlides(-1)">❮</a>
     <a class="next" @click="plusSlides(1)">❯</a>
   </div>
@@ -56,7 +63,6 @@ onMounted(() => {
   <br />
 
   <div style="text-align: center">
-    <!-- ✅ Use Vue event bindings -->
     <span class="dot" @click="currentSlide(1)"></span>
     <span class="dot" @click="currentSlide(2)"></span>
     <span class="dot" @click="currentSlide(3)"></span>
