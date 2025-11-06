@@ -1,4 +1,9 @@
 <script setup>
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import { faPlay } from "@fortawesome/free-solid-svg-icons";
+import { faPause } from "@fortawesome/free-solid-svg-icons";
+import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
+import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { ref, onMounted, onUnmounted } from "vue";
 
 const currentIndex = ref(0);
@@ -72,11 +77,17 @@ onUnmounted(() => {
     </div>
 
     <div class="controls">
-      <button @click="nextSlide(-1)">❮</button>
-      <button @click="togglePause">
-        {{ isPaused ? "▶️" : "⏸️" }}
+      <button @click="nextSlide(-1)">
+        <FontAwesomeIcon :icon="faAngleLeft" />
       </button>
-      <button @click="nextSlide(1)">❯</button>
+      <button @click="togglePause">
+        <FontAwesomeIcon :icon="isPaused ? faPlay : faPause" />
+      </button>
+      <button @click="nextSlide(1)">
+        <FontAwesomeIcon :icon="faAngleRight" />
+      </button>
     </div>
   </div>
 </template>
+
+<style scoped></style>
