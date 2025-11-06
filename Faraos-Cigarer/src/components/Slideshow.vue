@@ -76,16 +76,18 @@ onUnmounted(() => {
       ></button>
     </div>
 
-    <div class="controls">
-      <button @click="nextSlide(-1)">
-        <FontAwesomeIcon :icon="faAngleLeft" />
-      </button>
-      <button @click="togglePause">
-        <FontAwesomeIcon :icon="isPaused ? faPlay : faPause" />
-      </button>
-      <button @click="nextSlide(1)">
-        <FontAwesomeIcon :icon="faAngleRight" />
-      </button>
+    <div class="control-bar">
+      <div class="controls">
+        <button @click="nextSlide(-1)">
+          <FontAwesomeIcon :icon="faAngleLeft" />
+        </button>
+        <button @click="togglePause">
+          <FontAwesomeIcon :icon="isPaused ? faPlay : faPause" />
+        </button>
+        <button @click="nextSlide(1)">
+          <FontAwesomeIcon :icon="faAngleRight" />
+        </button>
+      </div>
     </div>
   </div>
 </template>
@@ -108,8 +110,8 @@ onUnmounted(() => {
   justify-content: flex-start;
   gap: 8px;
   position: absolute;
-  bottom: 30px;
-  left: 15px;
+  bottom: 50px;
+  left: 25px;
   margin-top: 0;
 }
 
@@ -126,5 +128,23 @@ onUnmounted(() => {
 
 .dots button.active {
   background-color: #000000;
+}
+
+.controls button {
+  background-color: #efd17a;
+  color: #000000;
+  border-color: #efd17a;
+  cursor: pointer;
+}
+
+.control-bar {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #000000;
+  padding: 10px;
+  padding-left: 40px;
+  display: flex;
+  justify-content: flex-start;
 }
 </style>
