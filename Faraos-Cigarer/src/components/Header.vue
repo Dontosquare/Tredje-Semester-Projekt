@@ -13,11 +13,9 @@ const refreshPage = () => {
 
 // yo mr scrummy her, de her elementer skal lige opdateres når vi har sat routes op for lige nu kan de ikke load den nye side da det SKAL matche før det er aktivt, men det skulle virke
 const menuItems = [
-  { name: "Hjem", link: "/" },
-  { name: "Cigarer", link: "/cigarer" },
-  { name: "Tilbehør", link: "/tilbehor" },
-  { name: "Om Os", link: "/om-os" },
-  { name: "Kontakt", link: "/kontakt" },
+  { name: "hjem", link: "/" },
+  { name: "Butikker", link: "/ButikkerView" },
+  { name: "Åbningstider", link: "/Aabningstiderview" },
 ];
 
 </script>
