@@ -31,19 +31,16 @@ onUnmounted(() => {
   <div>
     <!-- Slide 1 -->
     <div v-show="currentIndex === 0">
-      <p>1 / 3</p>
       <img src="../assets/image/mobil_slideshow_1.webp" alt="Billede 1" />
     </div>
 
     <!-- Slide 2 -->
     <div v-show="currentIndex === 1">
-      <p>2 / 3</p>
       <img src="../assets/image/mobil_slideshow_2.webp" alt="Billede 2" />
     </div>
 
     <!-- Slide 3 -->
     <div v-show="currentIndex === 2">
-      <p>3 / 3</p>
       <img src="../assets/image/mobil_slideshow_3.webp" alt="Billede 3" />
     </div>
 
