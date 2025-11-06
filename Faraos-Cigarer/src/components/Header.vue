@@ -3,7 +3,7 @@
 <template>
   <header>
     <div class="header">
-    <h1 class="header__logo">Faraos Cigarer</h1>
+    <img class="header__logo" src="../assets/image/faraos-logo.webp" alt="Faraos Cigarer Logo" />
     <p class="header__icon">test</p>
     <input class="header__input" type="text" placeholder="søg" />
     </div>
