@@ -46,14 +46,14 @@ const menuItems = [
 <style scoped>
 
 .off-screen-menu {
-  background-color: #fffcf3;
+  background-color: #000000;
   height: 100vh;
   width: 100%;
   max-width: 450px;
   position: fixed;
   top: 0;
-  right: -450px;
-  color: #081907;
+  left: -500px;
+  color: white;
   font-family: 'play';
   display: flex;
   flex-direction: column;
@@ -80,7 +80,7 @@ a:link, a:visited, a:hover, a:active {
 }
 
 .off-screen-menu.active{
-    right: 0;
+    left: 0;
 }
 
 nav {
@@ -95,12 +95,13 @@ nav {
     width: 50px;
     margin-left: auto;
     position: relative;
+    background-color: black;
 }
 
 .ham-menu span{
-    height: 5px;
-    width: 100%;
-    background-color: #081907;
+    height: 2px;
+    width: 70%;
+    background-color: white;
     border-radius: 25px;
     position: absolute;
     top: 50%;
