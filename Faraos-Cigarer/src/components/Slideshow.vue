@@ -68,12 +68,12 @@ onUnmounted(() => {
     </div>
 
     <div class="dots">
-      <button @click="goToSlide(0)">1</button>
-      <button @click="goToSlide(1)">2</button>
-      <button @click="goToSlide(2)">3</button>
-      <button @click="goToSlide(3)">4</button>
-      <button @click="goToSlide(4)">5</button>
-      <button @click="goToSlide(5)">6</button>
+      <button
+        v-for="n in totalSlides"
+        :key="n"
+        @click="goToSlide(n - 1)"
+        :class="{ active: currentIndex === n - 1 }"
+      ></button>
     </div>
 
     <div class="controls">
@@ -90,4 +90,41 @@ onUnmounted(() => {
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.slideshow {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.slideshow img {
+  width: 100%;
+  display: block;
+}
+
+.dots {
+  display: flex;
+  justify-content: flex-start;
+  gap: 8px;
+  position: absolute;
+  bottom: 30px;
+  left: 15px;
+  margin-top: 0;
+}
+
+.dots button {
+  width: 12px;
+  height: 12px;
+  background-color: #ffffff;
+  border-color: #000000;
+  border-width: 1px;
+  border-style: solid;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dots button.active {
+  background-color: #000000;
+}
+</style>
