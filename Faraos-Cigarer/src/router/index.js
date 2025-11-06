@@ -11,13 +11,13 @@ const router = createRouter({
     },
     {
       path: "/Butikker",
-      name: "Butikker",
-      component: () => import("../views/ButikkerView.vue"),
+      name: "Stores",
+      component: () => import("../views/StoresView.vue"),
     },
     {
-      path: "/Aabningstider",
-      name: "Aabningstider",
-      component: () => import("../views/Aabningstiderview.vue"),
+      path: "/Information",
+      name: "Information",
+      component: () => import("../views/InformationView.vue"),
     },
   ],
 });
