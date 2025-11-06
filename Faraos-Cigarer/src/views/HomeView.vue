@@ -1,9 +1,9 @@
 <script setup>
-
+import Slideshow from "../components/Slideshow.vue";
 </script>
 
 <template>
   <main>
-    <TheWelcome />
+    <Slideshow></Slideshow>
   </main>
 </template>
