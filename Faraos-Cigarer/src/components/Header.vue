@@ -7,6 +7,7 @@
       <div class="header__controls">
         <p class="header__icon">test</p>
         <input class="header__input" type="text" placeholder="søg" />
+        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
         <p class="header__icon">test</p>
       </div>
     </div>
