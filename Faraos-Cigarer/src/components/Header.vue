@@ -2,18 +2,28 @@
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { ref } from "vue";
+import { useRouter } from "vue-router";
+import { onMounted } from "vue";
 
 const isMenuActive = ref(false);
 const togglemenu = () => {
   isMenuActive.value = !isMenuActive.value; 
 };
 
+const router = useRouter();
+
+onMounted(() => {
+  router.afterEach(() => {
+    isMenuActive.value = false;
+  });
+});
+
 
 // yo mr scrummy her, de her elementer skal lige opdateres når vi har sat routes op for lige nu kan de ikke load den nye side da det SKAL matche før det er aktivt, men det skulle virke
 const menuItems = [
-  { name: "hjem", link: "/" },
+  { name: "Hjem", link: "/" },
   { name: "Butikker", link: "/Butikker" },
-  { name: "Åbningstider", link: "/Aabningstider" },
+  { name: "Åbningstider", link: "/Information" },
 ];
 
 </script>
