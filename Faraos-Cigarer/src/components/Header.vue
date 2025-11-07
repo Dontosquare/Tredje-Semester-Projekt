@@ -42,13 +42,18 @@ const menuItems = [
             </li>             
           </ul>
         </nav>
+
         <div class="ham-menu" :class="{ active: isMenuActive }" @click="togglemenu">
           <span></span>
           <span></span>
           <span></span>
         </div>
-        <input class="header__input" type="text" placeholder="søg" />
-        <button><FontAwesomeIcon :icon="faMagnifyingGlass"/></button>
+
+        <form id="searchform">
+        <input class="header__input" type="text" placeholder="" />
+        <button class="header__icon__search"><FontAwesomeIcon :icon="faMagnifyingGlass"/></button>
+        </form>
+
         <div class="header__icon">
         <button class="header__icon__basket"><FontAwesomeIcon :icon="faCartShopping" /></button>
         </div>
@@ -107,7 +112,7 @@ const menuItems = [
 .ham-menu {
     height: 50px;
     width: 50px;
-    margin-left: auto;
+    margin: auto;
     position: relative;
     background-color: black;
 }
@@ -156,6 +161,7 @@ const menuItems = [
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .header__controls {
@@ -175,13 +181,39 @@ const menuItems = [
   margin-bottom: 20px;
 }
 
+#searchform {
+  background: grey;
+  border-radius: 25px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
 .header__input {
-  width: 50%;
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 25px;
+  font-size: 20px;
+  padding: 8px 40px 8px 20px;
+}
+
+.header__icon__search {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: black;
+  font-size: 20px;
+  cursor: pointer;
 }
 
 .header__icon {
   white-space: nowrap;
   background-color: #000000;
+  margin: auto;
 }
 
 .header__icon__basket {
