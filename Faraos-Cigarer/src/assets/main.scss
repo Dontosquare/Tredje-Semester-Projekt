@@ -4,10 +4,25 @@
   box-sizing: border box;
 }
 
+/* VARIABLER */
+$color-anubis-black: #0E0F11;
+$color-pharaos-gold: #efd17a;
+$color-newspaper-white: #fff;
+$color-newspaper-white: #3396E6;
+
+
+$font-boogaloo: 'Boogaloo';
+$font-play: 'Play';
+ 
+/* MIXINS */
+@mixin box-shadow {
+  box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 6px 0 rgba(0, 0, 0, 0.19);
+}
+
 h2 {
-  font-family: "Boogaloo";
-  color: #efd17a;
-  -webkit-text-stroke: 1.5px #0e0f11;
+  font-family: $font-boogaloo;
+  color: $color-pharaos-gold;
+  -webkit-text-stroke: 1.5px $color-anubis-black;
   font-weight: 400;
   font-size: 39px;
   display: flex;
