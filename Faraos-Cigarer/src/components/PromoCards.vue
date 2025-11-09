@@ -16,19 +16,18 @@ defineProps({
 
 <style lang="scss" scoped>
 @import "../assets/main.scss";
-.category-card {
-  text-align: center;
-}
 
 .image-wrapper {
   position: relative;
   width: 100%;
+  margin-bottom: 5%;
 }
 
 .category-card img {
   width: 400px;
   height: auto;
   object-fit: cover;
+  box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.45);
 }
 
 .category-card button {
@@ -40,8 +39,12 @@ defineProps({
   background-color: $color-anubis-black;
   color: $color-pharaos-gold;
   font-family: $font-boogaloo;
+  font-size: 32px;
   border: none;
   cursor: pointer;
+  box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.45);
+  white-space: nowrap;
+  width: auto;
 }
 
 .category-card button:hover {
