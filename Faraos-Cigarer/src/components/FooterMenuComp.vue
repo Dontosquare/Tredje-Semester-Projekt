@@ -1,41 +1,39 @@
 <script setup>
-const footerTitles = [
-  {
-    title: "BUTIKKER",
+import { ref } from 'vue';
+
+const props = defineProps({
+  title: {
+    type: String,
+    required: true
   },
-  {
-    title: "KUNDESERVICE",
-  },
-  {
-    title: "SERVICE",
-  },
-  {
-    title: "OM FARAOS",
-  },
-];
+  menuItems: {
+    type: Array,
+    required: true
+  }
+});
+
+const isOpen = ref(false);
+
+const toggleMenu = () => {
+  isOpen.value = !isOpen.value;
+};
 </script>
 
 <template>
     <div class="footer-lists">
-        <div class="footer-lists--toggle">
+        <div class="footer-lists--toggle" @click="toggleMenu">
             <h3>{{ title }}</h3>
-            <img src="../assets/icons/arrow-vector.svg" alt="ikon af en knap som er toggle">
+            <img 
+              src="../assets/icons/arrow-vector.svg" 
+              alt="ikon af en knap som er toggle"
+              :class="{ 'rotated': isOpen }"
+            >
         </div>
-        <ul class="footer-lists__menu">
-            <li>
-                <RouterLink class="footer-lists__menu--links" to="#">Åbningstider</RouterLink>
-            </li>
-            <li>
-                <RouterLink class="footer-lists__menu--links" to="#">Lokationer</RouterLink>
-            </li>
-            <li>
-                <RouterLink class="footer-lists__menu--links" to="#">Faraos Cigarer Online</RouterLink>
-            </li>
-            <li>
-                <RouterLink class="footer-lists__menu--links" to="#">Aktiviteter</RouterLink>
-            </li>
-            <li>
-                <RouterLink class="footer-lists__menu--links" to="#">Kalender</RouterLink>
+        <ul class="footer-lists__menu" :style="{ display: isOpen ? 'block' : 'none' }">
+            <li v-for="(item, index) in menuItems" :key="index">
+                <RouterLink class="footer-lists__menu--links" :to="item.link">
+                  {{ item.text }}
+                </RouterLink>
             </li>
         </ul>
     </div>
@@ -53,13 +51,21 @@ const footerTitles = [
         padding: 1rem 2rem;
         display: flex;
         justify-content: space-between;
-        border-bottom: solid 1px #2A2A2A;
+        cursor: pointer;
 
         h3 {
             font-family: $font-boogaloo;
             color: $color-newspaper-white;
             font-size: 1.5rem;
             letter-spacing: 1.5px;
+        }
+
+        img {
+            transition: transform 0.3s ease;
+        }
+
+        img.rotated {
+            transform: rotate(180deg);
         }
     }
 
