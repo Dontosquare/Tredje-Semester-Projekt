@@ -32,7 +32,14 @@ const menuItems = [
 <template>
   <header>
     <div class="header">
-        <img class="header__logo" src="../assets/image/faraos-logo.webp" alt="Faraos Cigarer Logo" />
+        <div class="wrapper">
+            <div class="logo-box">
+                <RouterLink to="/" class="logo-box-flex">
+                    <img alt="Best Bud logo" class="logo" src="../assets/images/best-bud-logo.svg" />
+                    <h1 class="website-Titel">BestBud</h1>
+                </RouterLink>
+            </div>
+        </div>
       <div class="header__controls">
         <nav id="hammenu__nav" class="off-screen-menu" :class="{ active: isMenuActive }">
           <ul id="menu">
