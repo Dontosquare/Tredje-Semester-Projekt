@@ -2,6 +2,21 @@
 import Community1 from "@/assets/image/community_1.webp";
 import Community2 from "@/assets/image/community_2.webp";
 import Community3 from "@/assets/image/community_3.webp";
+
+const billeder = [
+  {
+    image: Community1,
+    title: "KLUB FARAOS",
+  },
+  {
+    image: Community2,
+    title: "FARAOS ER E-MÆRKET",
+  },
+  {
+    image: Community3,
+    title: "NYHEDER",
+  },
+];
 </script>
 
 <template>
