@@ -33,7 +33,8 @@ import Community3 from "@/assets/image/community_3.webp";
   background-color: $color-pharaos-gold;
   background-image: url("../assets/image/community_1.webp");
   background-repeat: no-repeat;
-  background-position: 1rem center;
+  background-size: 38%;
+  background-position: 0 0.09rem;
   color: $color-newspaper-white;
   font-family: $font-boogaloo;
   -webkit-text-stroke: 0.1rem $color-anubis-black;
@@ -60,6 +61,7 @@ import Community3 from "@/assets/image/community_3.webp";
   justify-content: center;
   align-items: center;
   text-align: center;
+  gap: 1rem;
 }
 
 .community-section__news {
