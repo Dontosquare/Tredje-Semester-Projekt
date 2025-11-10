@@ -33,12 +33,32 @@ import Community3 from "@/assets/image/community_3.webp";
   background-color: $color-pharaos-gold;
   background-image: url("../assets/image/community_1.webp");
   background-repeat: no-repeat;
+  color: $color-newspaper-white;
+  font-family: $font-boogaloo;
+  -webkit-text-stroke: 0.1rem $color-anubis-black;
+  font-size: 2.44rem;
+  font-weight: 400;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .community-section__e-label {
   width: 100%;
   height: 10rem;
   background-color: $color-anubis-black;
+  color: $color-pharaos-gold;
+  font-family: $font-boogaloo;
+  font-size: 2.44rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .community-section__news {
@@ -47,5 +67,16 @@ import Community3 from "@/assets/image/community_3.webp";
   background-color: $color-pharaos-gold;
   background-image: url("@/assets/image/community_3.webp");
   background-repeat: no-repeat;
+  color: $color-newspaper-white;
+  font-family: $font-boogaloo;
+  -webkit-text-stroke: 0.1rem $color-anubis-black;
+  font-size: 2.44rem;
+  font-weight: 400;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 </style>
