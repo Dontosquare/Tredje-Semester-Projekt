@@ -1,29 +1,31 @@
 <script setup>
 
+
+
 </script>
 
 <template>
     <footer>
         <div class="footer-lists">
             <div class="footer-lists--toggle">
-                <h3>Butikker</h3>
-                <ikon></ikon>
+                <h3>BUTIKKER</h3>
+                <img src="../assets/icons/arrow-vector.svg" alt="ikon af en knap som er toggle">
             </div>
-            <ul>
+            <ul class="footer-lists__menu">
                 <li>
-                    <RouterLink to="/">Åbningstider</RouterLink>
+                    <RouterLink class="footer-lists__menu--links" to="#">Åbningstider</RouterLink>
                 </li>
                 <li>
-                    <RouterLink to="/">Lokationer</RouterLink>
+                    <RouterLink class="footer-lists__menu--links" to="#">Lokationer</RouterLink>
                 </li>
                 <li>
-                    <RouterLink to="/">Faraos Cigarer Online</RouterLink>
+                    <RouterLink class="footer-lists__menu--links" to="#">Faraos Cigarer Online</RouterLink>
                 </li>
                 <li>
-                    <RouterLink to="/">Aktiviteter</RouterLink>
+                    <RouterLink class="footer-lists__menu--links" to="#">Aktiviteter</RouterLink>
                 </li>
                 <li>
-                    <RouterLink to="/">Kalender</RouterLink>
+                    <RouterLink class="footer-lists__menu--links" to="#">Kalender</RouterLink>
                 </li>
             </ul>
         </div>
@@ -41,12 +43,35 @@ footer {
 
         .footer-lists--toggle {
             display: flex;
-            background-color: red;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            
+            h3 {
+                font-family: $font-boogaloo;
+                color: $color-newspaper-white;
+                font-size: 1.5rem;
+                letter-spacing: 1.5px;
+            }
         }
+        
+        .footer-lists__menu {
+            padding: 1rem 2rem;
+            
+            li {
+                margin-bottom: 1rem;
 
-        h3 {
-            font-family: $font-boogaloo;
-            color: $color-newspaper-white;
+                .footer-lists__menu--links {
+                    text-decoration: none;
+                    font-family: $font-play;
+                    color: $color-newspaper-white;
+                    font-size: 1.3rem;
+                }
+            }
+
+            li:last-child {
+                margin-bottom: 0rem;
+            }
         }
     }
 }
