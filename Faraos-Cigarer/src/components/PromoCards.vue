@@ -27,7 +27,7 @@ defineProps({
   width: 400px;
   height: auto;
   object-fit: cover;
-  box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.45);
+  box-shadow: 7px 7px rgba(0, 0, 0, 0.25);
 }
 
 .category-card button {
@@ -42,7 +42,7 @@ defineProps({
   font-size: 32px;
   border: none;
   cursor: pointer;
-  box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.45);
+  box-shadow: 7px 7px rgba(0, 0, 0, 0.25);
   white-space: nowrap;
   width: auto;
 }
