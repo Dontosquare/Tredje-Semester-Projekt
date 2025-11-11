@@ -1,14 +1,19 @@
 <script setup>
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { faTiktok } from "@fortawesome/free-brands-svg-icons";
+import { faFacebook } from "@fortawesome/free-brands-svg-icons";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
 </script>
 
 <template>
   <div class="socials-section">
     <div class="socials-section__facebook">
+      <FontAwesomeIcon :icon="faFacebook" />
       <p>FACEBOOK</p>
     </div>
     <div class="socials-section__instagram">
+      <FontAwesomeIcon :icon="faInstagram" />
       <p>INSTAGRAM</p>
     </div>
     <div class="socials-section__tiktok">
@@ -16,6 +21,7 @@ import { faTiktok } from "@fortawesome/free-brands-svg-icons";
       <p>TIKTOK</p>
     </div>
     <div class="socials-section__twitter">
+      <FontAwesomeIcon :icon="faXTwitter" />
       <p>TWITTER</p>
     </div>
   </div>
@@ -76,5 +82,11 @@ import { faTiktok } from "@fortawesome/free-brands-svg-icons";
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.socials-section__instagram :deep(svg),
+.socials-section__twitter :deep(svg) {
+  stroke: $color-anubis-black; // outline-farve
+  stroke-width: 1rem; // tykkelse – justér!
 }
 </style>
