@@ -127,7 +127,7 @@ onUnmounted(() => {
   gap: 0.48rem;
   position: absolute;
   bottom: 3.75rem;
-  left: 1.2rem;
+  left: 2rem;
   margin-top: 0;
 }
 
@@ -159,7 +159,6 @@ onUnmounted(() => {
 .slideshow__control-bar {
   width: 100%;
   max-width: 600px;
-  margin: 0 auto;
   background-color: #000000;
   padding: 0.6rem 0 0.6rem 1.25rem;
   display: flex;

@@ -15,17 +15,16 @@
 
   <div class="contact">
     <p class="contact__titel">KONTAKT</p>
-    <p class="contact__text">
-      Faraos Cigarer - Odense Klostervej 3,5000 Odense C Telefon: +45 65 91 97
-      01 E-mail: Odense@faraos.dk
-    </p>
+    <ul class="contact__text">
+      <li>Faraos Cigarer - Odense Klostervej 3, 5000 Odense C</li>
+      <li>Telefon: +45 65 91 97 01</li>
+      <li>E-mail: Odense@faraos.dk</li>
+    </ul>
   </div>
 
   <div class="closing-days">
-    <p class="closing-days__text">
-      Faraos Cigarer holder desuden lukket de følgende dage:
-    </p>
-    <ul class="closing-days__list">
+    <p>Faraos Cigarer holder desuden lukket de følgende dage:</p>
+    <ul>
       <li>Nytårsdag</li>
       <li>Skærtorsdag</li>
       <li>Langfredag</li>
@@ -48,9 +47,30 @@
 
 .opening-hours p {
   color: $color-pharaos-gold;
+  font-family: $font-boogaloo;
 }
 
 .opening-hours ul {
   color: $color-newspaper-white;
+  font-family: $font-play;
+}
+
+.contact {
+  background-color: $color-pharaos-gold;
+}
+
+.contact p {
+  color: $color-newspaper-white;
+  font-family: $font-boogaloo;
+}
+
+.contact ul {
+  font-family: $font-play;
+}
+
+.closing-days {
+  font-family: $font-play;
+  color: $color-newspaper-white;
+  background-color: $color-anubis-black;
 }
 </style>
