@@ -4,7 +4,38 @@ import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
 import { ref } from 'vue';
 
 
+const storeMapSections = ref([
+  {
+    id: 'jylland',
+    title: 'JYLLAND',
+    items: [
+      { id: 'j1', title: 'AARHUS GAMES', url: '#' },
+      { id: 'j2', title: 'AARHUS COMICS', url: '#' },
+    ],
+  },
+  {
+    id: 'fyn',
+    title: 'FYN',
+    items: [
+      { id: 'f1', title: 'ODENSE', url: '#' },
+    ],
+  },
+  {
+    id: 'sjaelland',
+    title: 'SJÆLLAND',
+    items: [
+      { id: 's1', title: 'KØBENHAVN COMICS & POTTER', url: '#' },
+      { id: 's2', title: 'KØBENHAVN BRÆT- & ROLLESPIL', url: '#' },
+      { id: 's3', title: 'KØBENHAVN FIGURSPIL', url: '#' },
+    ],
+  },
+]);
 
+const openSection = ref(null);
+
+function toggleSection(id) {
+  openSection.value = openSection.value === id ? null : id;
+}
 </script>
 
 
@@ -12,6 +43,21 @@ import { ref } from 'vue';
   <img class="butikker__kort" src="@/assets/image/Landekort.webp" alt="Landkort" />
   <h2>HVOR VIL DU HEN?</h2>
 
+  <div v-for="section in storeMapSections" :key="section.id" class="butikker__sektion">
+    <button class="butikker__sektion-knap" @click="toggleSection(section.id)">
+      {{ section.title }}
+      <FontAwesomeIcon :icon="faAngleDown" :class="{'rotate-180': openSection === section.id}" />
+    </button>
+    <transition name="slide-fade">
+      <ul v-if="openSection === section.id" class="butikker__sektion-liste">
+        <li v-for="item in section.items" :key="item.id" class="butikker__sektion-liste-item">
+          <a :href="item.url">{{ item.title }}</a>
+        </li>
+      </ul>
+    </transition>
+  </div>
+
+ 
 </template>
 
 <style lang="scss" scoped>
@@ -21,4 +67,27 @@ import { ref } from 'vue';
   height: auto;
 }
 
+
+.slide-fade-enter-active {
+  transition: all 250ms ease;
+}
+.slide-fade-leave-active {
+  transition: all 200ms ease;
+}
+.slide-fade-enter-from {
+  opacity: 0;
+  transform: translateY(-6px);
+}
+.slide-fade-enter-to {
+  opacity: 1;
+  transform: translateY(0);
+}
+.slide-fade-leave-from {
+  opacity: 1;
+  transform: translateY(0);
+}
+.slide-fade-leave-to {
+  opacity: 0;
+  transform: translateY(-6px);
+}
 </style>
