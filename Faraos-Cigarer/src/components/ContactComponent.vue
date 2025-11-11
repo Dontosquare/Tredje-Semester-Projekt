@@ -19,7 +19,20 @@
   </div>
 
   <div class="lukke-dage">
-    <p class="lukke-dage__text"></p>
+    <p class="lukke-dage__text">
+      Faraos Cigarer holder desuden lukket de følgende dage:
+    </p>
+    <ul class="lukke-dage__list">
+      <li>Nytårsdag</li>
+      <li>Skærtorsdag</li>
+      <li>Langfredag</li>
+      <li>Kristi Himmelfartsdag</li>
+      <li>Grundlovsdag</li>
+      <li>1. og 2. pinsedag</li>
+      <li>Juleaftensdag</li>
+      <li>1. og 2. juledag.</li>
+      <li>Nytårsaftensdag (Lukker fra kl. 15)</li>
+    </ul>
   </div>
 </template>
 
