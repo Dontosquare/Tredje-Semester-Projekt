@@ -83,7 +83,7 @@ const footerSections = [
                     </a>
                 </div>
                 <div class="footer-logos--rounded">
-                    <a href="https://www.facebook.com/faraoscigarer#" target="_blank" rel="noopener noreferrer">
+                    <a href="https://x.com/FaraosCigarer" target="_blank" rel="noopener noreferrer">
                         <img src="../assets/icons/twitter-x-icon.svg" alt="ikon af twitter logo" />
                     </a>
                 </div>
