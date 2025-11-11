@@ -4,8 +4,8 @@ import ContactComponent from "@/components/ContactComponent.vue";
 </script>
 
 <template>
-  <InformationComp />
   <ContactComponent />
+  <InformationComp />
 </template>
 
 <style lang="scss" scoped>
