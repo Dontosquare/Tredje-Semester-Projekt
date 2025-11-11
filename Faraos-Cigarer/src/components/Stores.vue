@@ -3,10 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
 import { ref } from 'vue';
 
-/*
-  Data structure: array of sections, each with an id, title and items array.
-  Each item has an id, title and url.
-*/
+
 const storeMapSections = ref([
   {
     id: 'jylland',
@@ -34,7 +31,6 @@ const storeMapSections = ref([
   },
 ]);
 
-// Track open section id (null = all closed)
 const openSection = ref(null);
 
 function toggleSection(id) {
@@ -72,8 +68,6 @@ function toggleSection(id) {
 }
 
 
-
-/* Transition */
 .slide-fade-enter-active {
   transition: all 250ms ease;
 }
