@@ -183,9 +183,11 @@ const menuItems = [
 .header__logo {
   display: flex;
   justify-content: center;
-  width: 200px;
+  width:  290px;
   height: auto;
   margin: auto;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
 }
 
 #searchform {
