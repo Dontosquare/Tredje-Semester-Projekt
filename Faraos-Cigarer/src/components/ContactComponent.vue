@@ -7,19 +7,23 @@
       <li>Hverdage: <br></br> Mandag - Fredag: 10:00 - 18:00</li>
       <li>Weekendtider:<br></br> Lørdag - 10:00 - 17:00 <br></br> Søndag - 11:00 - 16:00</li>
       <li>
-        *Faraos Cigarer holder dog søndagslukket, når søndag falder på en
+        *Faraos Cigarer holder dog søndagslukket, når søndag falder på en
         helligdag.
       </li>
     </ul>
   </div>
 
   <div class="contact">
-    <p class="contact__titel">KONTAKT</p>
-    <ul class="contact__text">
-      <li>Faraos Cigarer - Odense <br></br>Klostervej 3, <br></br>5000 Odense C</li>
-      <li>Telefon:<br></br> +45 65 91 97 01</li>
-      <li>E-mail: <br></br>Odense@faraos.dk</li>
-    </ul>
+    <h3 class="contact__titel">KONTAKT</h3>
+    <div class="contact__text">
+      <p>Faraos Cigarer - Odense</p>
+      <p>Klostervej 3,</p>
+      <p>5000 Odense C</p>
+      <p>Telefon:</p>
+      <p>+45 65 91 97 01</p>
+      <p>E-mail:</p>
+      <p>Odense@faraos.dk</p>
+    </div>
   </div>
 
   <div class="closing-days">
@@ -56,11 +60,12 @@
 .opening-hours ul {
   color: $color-newspaper-white;
   font-family: $font-play;
-  padding-top: 1rem;
+  padding-top: 0.5rem;
+  list-style: none;
 }
 
 .opening-hours li {
-  padding-top: 0.5rem;
+  padding-top: 1rem;
 }
 
 .contact {
@@ -69,20 +74,17 @@
   background-color: $color-pharaos-gold;
 }
 
-.contact p {
-  color: $color-newspaper-white;
-  font-family: $font-boogaloo;
-  font-size: 2.44rem;
-  -webkit-text-stroke: 0.1rem $color-anubis-black;
-}
 
-.contact ul {
+.contact p {
   font-family: $font-play;
   padding-top: 1rem;
 }
 
-.contact li {
-  padding-top: 0.5rem;
+.contact h3 {
+  color: $color-newspaper-white;
+  font-family: $font-boogaloo;
+  font-size: 2.44rem;
+  -webkit-text-stroke: 0.1rem $color-anubis-black;
 }
 
 .closing-days {
@@ -94,8 +96,9 @@
 }
 .closing-days ul {
   padding-top: 1rem;
+  padding-left: 1rem;
 }
 .closing-days li {
-  padding-top: 0.5rem;
+  padding-top: 1rem;
 }
 </style>
