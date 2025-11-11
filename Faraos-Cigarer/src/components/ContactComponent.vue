@@ -3,11 +3,14 @@
 <template>
   <div class="opening-hours">
     <p class="opening-hours__titel">ÅBNINGSTIDER</p>
-    <p class="opening-hours__text">
-      Hverdage: Mandag - Fredag: 10:00 - 18:00 Weekendtider: Lørdag - 10:00 -
-      17:00 Søndag - 11:00 - 16:00 *Faraos Cigarer holder dog søndagslukket, når
-      søndag falder på en helligdag.
-    </p>
+    <ul class="opening-hours__text">
+      <li>Hverdage: Mandag - Fredag: 10:00 - 18:00</li>
+      <li>Weekendtider: Lørdag - 10:00 - 17:00 Søndag - 11:00 - 16:00</li>
+      <li>
+        *Faraos Cigarer holder dog søndagslukket, når søndag falder på en
+        helligdag.
+      </li>
+    </ul>
   </div>
 
   <div class="contact">
@@ -38,4 +41,16 @@
 
 <style lang="scss" scoped>
 @import "../assets/main.scss";
+
+.opening-hours {
+  background-color: $color-anubis-black;
+}
+
+.opening-hours p {
+  color: $color-pharaos-gold;
+}
+
+.opening-hours ul {
+  color: $color-newspaper-white;
+}
 </style>
