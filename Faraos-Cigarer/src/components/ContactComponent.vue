@@ -48,6 +48,7 @@
 .opening-hours p {
   color: $color-pharaos-gold;
   font-family: $font-boogaloo;
+  font-size: 2.44rem;
 }
 
 .opening-hours ul {
@@ -62,6 +63,8 @@
 .contact p {
   color: $color-newspaper-white;
   font-family: $font-boogaloo;
+  font-size: 2.44rem;
+  -webkit-text-stroke: 0.1rem $color-anubis-black;
 }
 
 .contact ul {
