@@ -2,7 +2,6 @@
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
 import { ref } from 'vue';
-import { useRouter } from "vue-router";
 
 
 const storeMapSections = ref([
