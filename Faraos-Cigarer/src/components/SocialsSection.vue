@@ -1,23 +1,52 @@
 <script setup>
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { faTiktok } from "@fortawesome/free-brands-svg-icons";
+import { faFacebook } from "@fortawesome/free-brands-svg-icons";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
 </script>
 
 <template>
   <div class="socials-section">
-    <div class="socials-section__facebook">
+    <a
+      class="socials-section__facebook"
+      href="https://www.facebook.com/faraoscigarer"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <FontAwesomeIcon :icon="faFacebook" />
       <p>FACEBOOK</p>
-    </div>
-    <div class="socials-section__instagram">
+    </a>
+
+    <a
+      class="socials-section__instagram"
+      href="https://www.instagram.com/faraoscigarer/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <FontAwesomeIcon :icon="faInstagram" />
       <p>INSTAGRAM</p>
-    </div>
-    <div class="socials-section__tiktok">
+    </a>
+
+    <a
+      class="socials-section__tiktok"
+      href="https://www.tiktok.com/@faraoscigarer"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <FontAwesomeIcon :icon="faTiktok" />
       <p>TIKTOK</p>
-    </div>
-    <div class="socials-section__twitter">
+    </a>
+
+    <a
+      class="socials-section__twitter"
+      href="https://x.com/FaraosCigarer"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <FontAwesomeIcon :icon="faXTwitter" />
       <p>TWITTER</p>
-    </div>
+    </a>
   </div>
 </template>
 
@@ -35,6 +64,7 @@ import { faTiktok } from "@fortawesome/free-brands-svg-icons";
   display: flex;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
 }
 
 .socials-section__instagram {
@@ -49,6 +79,7 @@ import { faTiktok } from "@fortawesome/free-brands-svg-icons";
   display: flex;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
 }
 
 .socials-section__tiktok {
@@ -62,6 +93,7 @@ import { faTiktok } from "@fortawesome/free-brands-svg-icons";
   display: flex;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
 }
 
 .socials-section__twitter {
@@ -76,5 +108,12 @@ import { faTiktok } from "@fortawesome/free-brands-svg-icons";
   display: flex;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
+}
+
+.socials-section__instagram :deep(svg),
+.socials-section__twitter :deep(svg) {
+  stroke: $color-anubis-black;
+  stroke-width: 1rem;
 }
 </style>
