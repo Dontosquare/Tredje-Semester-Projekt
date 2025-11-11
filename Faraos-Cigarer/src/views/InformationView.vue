@@ -1,10 +1,11 @@
 <script setup>
-
+import ContactComponent from "@/components/ContactComponent.vue";
 </script>
 
 <template>
   <div class="about">
     <h1>This is an information page</h1>
+    <ContactComponent />
   </div>
 </template>
 
