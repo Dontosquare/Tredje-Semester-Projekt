@@ -2,6 +2,7 @@
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
 import { ref } from 'vue';
+import { RouterLink } from 'vue-router';
 
 
 const storeMapSections = ref([
@@ -9,16 +10,16 @@ const storeMapSections = ref([
     id: 'jylland',
     title: 'JYLLAND',
     items: [
-      { id: 'j1', title: 'Find alle de lokale butikker på Jylland!'},
-      { id: 'j2', title: 'AARHUS GAMES'},
-      { id: 'j3', title: 'AARHUS COMICS'},
+      { id: 'j1', title: 'Find alle de lokale butikker på Jylland!', url: '#'},
+      { id: 'j2', title: 'AARHUS GAMES', url: '#'},
+      { id: 'j3', title: 'AARHUS COMICS', url: '#'},
     ],
   },
   {
     id: 'fyn',
     title: 'FYN',
     items: [
-      { id: 'f1', title: 'Find alle de lokale butikker på Fyn!'},
+      { id: 'f1', title: 'Find alle de lokale butikker på Fyn!', url: '#'},
       { id: 'f2', title: 'ODENSE', url: '/information' },
     ],
   },
@@ -26,10 +27,10 @@ const storeMapSections = ref([
     id: 'sjaelland',
     title: 'SJÆLLAND',
     items: [
-      { id: 's1', title: 'Find alle de lokale butikker på Sjælland!'},
-      { id: 's2', title: 'KØBENHAVN COMICS & POTTER'},
-      { id: 's3', title: 'KØBENHAVN BRÆT- & ROLLESPIL'},
-      { id: 's4', title: 'KØBENHAVN FIGURSPIL'},
+      { id: 's1', title: 'Find alle de lokale butikker på Sjælland!', url: '#' },
+      { id: 's2', title: 'KØBENHAVN COMICS & POTTER', url: '#'}, 
+      { id: 's3', title: 'KØBENHAVN BRÆT- & ROLLESPIL', url: '#'},
+      { id: 's4', title: 'KØBENHAVN FIGURSPIL', url: '#'},
     ],
   },
 ]);
@@ -43,10 +44,10 @@ function toggleSection(id) {
 
 
 <template>
-  <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d577050.2589892185!2d10.37101225287178!3d55.60022845645195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sFaraos%20Cigarer!5e0!3m2!1sda!2sdk!4v1762941964703!5m2!1sda!2sdk" 
-  width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-  </iframe>
-
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d577050.2589892185!2d10.37101225287178!3d55.60022845645195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sFaraos%20Cigarer!5e0!3m2!1sda!2sdk!4v1762941964703!5m2!1sda!2sdk"
+    width="100%" height="500rem" style="border:0;" allowfullscreen="" loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"></iframe>
   <h2>HVOR VIL DU HEN?</h2>
 
   <div v-for="section in storeMapSections" :key="section.id" class="butikker__sektion" @click="toggleMenu" aria-label="landsdele sektioner">
