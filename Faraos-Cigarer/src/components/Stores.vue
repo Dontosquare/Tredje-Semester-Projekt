@@ -9,16 +9,16 @@ const storeMapSections = ref([
     id: 'jylland',
     title: 'JYLLAND',
     items: [
-      { id: 'j1', title: 'Find alle de lokale butikker på Jylland!', url: '#' },
-      { id: 'j2', title: 'AARHUS GAMES', url: '#' },
-      { id: 'j3', title: 'AARHUS COMICS', url: '#' },
+      { id: 'j1', title: 'Find alle de lokale butikker på Jylland!'},
+      { id: 'j2', title: 'AARHUS GAMES'},
+      { id: 'j3', title: 'AARHUS COMICS'},
     ],
   },
   {
     id: 'fyn',
     title: 'FYN',
     items: [
-      { id: 'f1', title: 'Find alle de lokale butikker på Fyn!', url: '#' },
+      { id: 'f1', title: 'Find alle de lokale butikker på Fyn!'},
       { id: 'f2', title: 'ODENSE', url: '/information' },
     ],
   },
@@ -26,10 +26,10 @@ const storeMapSections = ref([
     id: 'sjaelland',
     title: 'SJÆLLAND',
     items: [
-      { id: 's1', title: 'Find alle de lokale butikker på Sjælland!', url: '#' },
-      { id: 's2', title: 'KØBENHAVN COMICS & POTTER', url: '#' },
-      { id: 's3', title: 'KØBENHAVN BRÆT- & ROLLESPIL', url: '#' },
-      { id: 's4', title: 'KØBENHAVN FIGURSPIL', url: '#' },
+      { id: 's1', title: 'Find alle de lokale butikker på Sjælland!'},
+      { id: 's2', title: 'KØBENHAVN COMICS & POTTER'},
+      { id: 's3', title: 'KØBENHAVN BRÆT- & ROLLESPIL'},
+      { id: 's4', title: 'KØBENHAVN FIGURSPIL'},
     ],
   },
 ]);
