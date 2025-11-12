@@ -12,7 +12,7 @@
     </nav>
 
     <div class="map-container">
-        <img class="gMap" src="../assets/image/faraos-local-map.webp" alt="billede af det google maps over Faraos Cigarers lokale butik i odense" />
+        <img class="gMap" src="../assets/image/faraos-local-map-phone.webp" alt="billede af det google maps over Faraos Cigarers lokale butik i odense" />
     </div>
 </template>
 
@@ -22,6 +22,7 @@
 .breadcrumbs {
     display: flex;
     justify-content: flex-start;
+    padding: 0rem 2rem;
 
     p {
         margin-left: 0.5rem;
@@ -43,6 +44,7 @@
 
 .map-container{
     padding: 2rem;
+    padding-bottom: 0;
 
     .gMap {
         width: 100%;
