@@ -46,16 +46,16 @@ function toggleSection(id) {
   <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d577050.2589892185!2d10.37101225287178!3d55.60022845645195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sFaraos%20Cigarer!5e0!3m2!1sda!2sdk!4v1762941964703!5m2!1sda!2sdk" 
   width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
   </iframe>
-  
+
   <h2>HVOR VIL DU HEN?</h2>
 
-  <div v-for="section in storeMapSections" :key="section.id" class="butikker__sektion" @click="toggleMenu">
-    <button class="butikker__sektion--knap" @click="toggleSection(section.id)">
+  <div v-for="section in storeMapSections" :key="section.id" class="butikker__sektion" @click="toggleMenu" aria-label="Landele sektioner">
+    <button class="butikker__sektion--knap" @click="toggleSection(section.id)" aria-label="åben/luk felt">
       {{ section.title }}
       <FontAwesomeIcon :icon="faAngleDown" :class="{'rotate-180': openSection === section.id}" class="butikker__ikon"/>
     </button>
     <transition name="slide-fade">
-      <ul v-if="openSection === section.id" class="butikker__sektion__boks">
+      <ul v-if="openSection === section.id" class="butikker__sektion__boks" aria-label="informations boks">
         <li v-for="item in section.items" :key="item.id" class="butikker__sektion__listitem">
           <RouterLink :to="item.url" class="butikker__links">{{ item.title }}</RouterLink>
         </li>
