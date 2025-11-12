@@ -97,7 +97,7 @@ const footerSections = [
                 <img class="footer-payments--img" src="../assets/icons/faktura-icon.svg" alt="Et ikon af Fakturas logo" aria-label="Faktura ikon" />
             </div>
             <a href="" class="footer-payments--text" aria-label="Link til trustpilot">Gå til Trustpilot</a>
-            <p class="footer-payments--text">© Faraos Cigarer Aps Cvr 17272241</p>
+            <p class="footer-payments--text" aria-label="Faraos Cigarer CVR: 17272241">© Faraos Cigarer Aps Cvr 17272241</p>
         </div>
     </footer>
 </template>
