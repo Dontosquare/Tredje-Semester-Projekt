@@ -119,10 +119,10 @@ import FaraosCigarerRoar from "@/assets/image/faraos-cigarer-roar.webp";
 }
 
 .closing-days img {
-  width: 100%;
-  height: auto;
-  object-fit: cover; /* crops the image nicely if it’s inside a fixed-height box */
   display: block;
-  margin-top: 1rem; /* space between text and image */
+  margin: 1rem auto;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 </style>
