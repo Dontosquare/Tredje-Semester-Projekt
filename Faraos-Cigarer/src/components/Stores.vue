@@ -55,12 +55,15 @@ function toggleSection(id) {
       {{ section.title }}
       <FontAwesomeIcon :icon="faAngleDown" :class="{'rotate-180': openSection === section.id}" class="butikker__ikon" aria-label="åben/luk pil"/>
     </button>
+
     <transition name="slide-fade">
+    <div class="listitem__controls">
       <ul v-if="openSection === section.id" class="butikker__sektion__boks" aria-label="informations boks">
         <li v-for="item in section.items" :key="item.id" class="butikker__sektion__listitem">
           <RouterLink :to="item.url" class="butikker__links">{{ item.title }}</RouterLink>
         </li>
       </ul>
+    </div>  
     </transition>
   </div>
 
@@ -116,15 +119,19 @@ function toggleSection(id) {
   cursor: pointer;
 }
 
-.butikker__sektion__boks {
-  list-style: none;
-  padding: 0;
-  margin: 0.5rem 0;
+.listitem__controls {
   width: 100%;
+  display: flex;
+  justify-content: start;
+  padding: 0;
+  align-items: left;
+}
+
+.butikker__sektion__boks {
+  width: 100%;
+  padding: 0;
   color: $color-anubis-black;
   background-color: $color-pharaos-gold;
-  text-align: center;
-  justify-content: center;
 }
 
 .butikker__links {
