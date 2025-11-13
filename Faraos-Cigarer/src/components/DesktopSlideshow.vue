@@ -123,6 +123,7 @@ onUnmounted(() => {
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
+  display: none;
 }
 
 .slideshow img {
@@ -173,5 +174,11 @@ onUnmounted(() => {
   display: flex;
   justify-content: flex-start;
   box-sizing: border-box;
+}
+
+@media (min-width: 601px) {
+  .slideshow {
+    display: block;
+  }
 }
 </style>

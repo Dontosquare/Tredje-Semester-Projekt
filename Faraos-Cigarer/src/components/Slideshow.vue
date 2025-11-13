@@ -174,4 +174,10 @@ onUnmounted(() => {
   justify-content: flex-start;
   box-sizing: border-box;
 }
+
+@media (min-width: 601px) {
+  .slideshow {
+    display: none;
+  }
+}
 </style>
