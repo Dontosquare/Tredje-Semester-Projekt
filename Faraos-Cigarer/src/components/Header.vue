@@ -1,5 +1,6 @@
 <script setup>
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { ref } from "vue";
@@ -21,12 +22,51 @@ onMounted(() => {
 
 
 
-const menuItems = [
-  { name: "Hjem", link: "/" },
-  { name: "Butikker", link: "/Butikker" },
-  { name: "Åbningstider", link: "/Information" },
-];
+const burgerMenuSelection = ref([
+  {
+    id: 'Kategorier',
+    title: 'KATEGORIER',
+    items: [
+      { id: 'K1', title: 'Bøger og tegneserier', url: '#' },
+      { id: 'K2', title: 'Aarhus games', url: '#' },
+      { id: 'K3', title: 'Aarhus comics', url: '#' },
+    ],
+  },
+  {
+    id: 'KlubFaraos',
+    title: 'KLUB FARÅOS',
+    items: [
+      { id: 'f1', title: 'Find alle de lokale butikker på Fyn!', url: '#' },
+      { id: 'f2', title: 'Odense', url: '/information' },
+    ],
+  },
+  {
+    id: 'Nyheder',
+    title: 'NYHEDER',
+    items: [
+      { id: 's1', title: 'Find alle de lokale butikker på Sjælland!', url: '#' },
+      { id: 's2', title: 'København comics & potter', url: '#' },
+      { id: 's3', title: 'København bræt- & rollespil', url: '#' },
+      { id: 's4', title: 'København figurspil', url: '#' },
+    ],
+  },
+  {
+    id: 'Tilbud',
+    title: 'TILBUD',
+    items: [
+      { id: 's1', title: 'Find alle de lokale butikker på Sjælland!', url: '#' },
+      { id: 's2', title: 'København comics & potter', url: '#' },
+      { id: 's3', title: 'København bræt- & rollespil', url: '#' },
+      { id: 's4', title: 'København figurspil', url: '#' },
+    ],
+  },
+]);
 
+const openSection = ref(null);
+
+function toggleSection(id) {
+  openSection.value = openSection.value === id ? null : id;
+}
 </script>
 
 <template>
@@ -39,11 +79,24 @@ const menuItems = [
 
       <div class="header__controls">
         <nav id="hammenu__nav" class="off-screen-menu" :class="{ active: isMenuActive }">
-          <ul id="menu">
-            <li class="header__hammenu__list" v-for="item in menuItems" :key="item.name" aria-label="menu valg">
-              <router-link class="header__hammenu__searchtag" :to="item.link">{{ item.name }}</router-link>
-            </li>             
+          <div v-for="section in burgerMenuSelection" :key="section.id" class="burgermenu__sektion" @click="toggleMenu"
+             aria-label="burgermenu punkter">
+              <button class="burgermenu__section--button" @click="toggleSection(section.id)" aria-label="åben/luk felt">
+                 {{ section.title }}
+                <FontAwesomeIcon :icon="faAngleDown" :class="{ 'rotate-180': openSection === section.id }" class="burgermenu__ikon"
+                aria-label="åben/luk pil" />
+              </button>
+
+      <transition name="slide-fade">
+        <div class="listitem__controls">
+          <ul v-if="openSection === section.id" class="burgermenu__section__boks" aria-label="informations boks">
+            <li v-for="item in section.items" :key="item.id" class="burgermenu__section__listitem">
+              <RouterLink :to="item.url" class="burgermenu__links">{{ item.title }}</RouterLink>
+            </li>
           </ul>
+        </div>
+      </transition>
+    </div>
         </nav>
 
         <div class="ham-menu" :class="{ active: isMenuActive }" @click="togglemenu" aria-label="burgermenu knap">
@@ -159,6 +212,73 @@ const menuItems = [
     top: 50%;
     transform: translate(-50%, -50%) rotate(-45deg);
     z-index: 1;
+}
+
+.burgermenu__section {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  color: $color-pharaos-gold;
+  background-color: $color-anubis-black;
+}
+
+.burgermenu__section:last-of-type {
+  margin-bottom: 0;
+}
+
+.burgermenu__ikon {
+  transition: transform 0.3s ease;
+  transform: rotate(0deg);
+  transform-origin: center;
+  backface-visibility: hidden;
+}
+
+.burgermenu__ikon.rotate-180 {
+  transform: rotate(180deg);
+}
+.burgermenu__section--button {
+  background: none;
+  border: none;
+  color: $color-pharaos-gold;
+  font-size: 1.5rem;
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  font-family: $font-boogaloo;
+  cursor: pointer;
+}
+
+.listitem__controls {
+  width: 100%;
+  background-color: $color-pharaos-gold;
+}
+
+.burgermenu__section__boks {
+  width: 100%;
+  padding: 1.5rem;
+  color: $color-anubis-black;
+}
+
+.burgermenu__links {
+  text-decoration: none;
+  font-family: $font-play;
+  color: $color-anubis-black;
+}
+
+.burgermenu__sektion__listitem {
+  margin-left: 1rem;
+}
+
+.burgermenu__sektion__listitem:first-of-type {
+  list-style-type: none;
+  margin: 0;
+  margin-bottom: 1rem;
 }
 
 .header {
