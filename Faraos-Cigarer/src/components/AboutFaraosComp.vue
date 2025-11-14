@@ -189,6 +189,7 @@ button {
     flex: 1;
     display: block;
     padding: 2rem;
+    padding-top: 0;
     background-color: $color-pharaos-gold;
   }
 
@@ -199,6 +200,7 @@ button {
   .roar-image {
     flex: 1;
     padding: 2rem;
+    padding-top: 0;
   }
 
   .roar-image img {
