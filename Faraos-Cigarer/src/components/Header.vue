@@ -79,9 +79,7 @@ function toggleSection(id) {
 
       <div class="header__controls">
         <nav id="hammenu__nav" class="off-screen-menu" :class="{ active: isMenuActive }">
-          <RouterLink to="/">
-             <img alt="faraos logo" class="header__logo" src="../assets/image/faraos-cigarer-logo-svg.svg">
-          </RouterLink>
+          <img alt="faraos logo" class="header__logo" src="../assets/image/faraos-cigarer-logo-svg.svg">
           <form id="searchform">
           <input class="header__input__burgermenu" type="text" placeholder="" aria-label="søgefelt"/>
           <button class="header__icon__search__burgermenu"><FontAwesomeIcon :icon="faMagnifyingGlass" aria-label="søgikon"/></button>
@@ -91,9 +89,9 @@ function toggleSection(id) {
           <button class="header__icon__basket__burgermenu"><FontAwesomeIcon :icon="faCartShopping" aria-label="indkøbskurv" /></button>
           </div>
 
-          <div v-for="section in burgerMenuSelection" :key="section.id" class="burgermenu__sektion" @click="togglemenu"
+          <div v-for="section in burgerMenuSelection" :key="section.id" class="burgermenu__sektion" @click="toggleMenu"
              aria-label="burgermenu punkter">
-              <button class="burgermenu__section--button" @click="togglesection(section.id)" aria-label="åben/luk felt">
+              <button class="burgermenu__section--button" @click="toggleSection(section.id)" aria-label="åben/luk felt">
                  {{ section.title }}
                 <FontAwesomeIcon :icon="faAngleDown" :class="{ 'rotate-180': openSection === section.id }" class="burgermenu__ikon"
                 aria-label="åben/luk pil" />
@@ -134,10 +132,10 @@ function toggleSection(id) {
 @import '../assets/main.scss';
 
 .off-screen-menu {
-  background-color: #000000;
+  background-color: $color-pharaos-gold;
   height: 100vh;
   width: 100%;
-  max-width: 450px;
+  max-width: 480px;
   position: fixed;
   top: 0;
   left: -500px;
@@ -169,13 +167,6 @@ function toggleSection(id) {
 
 .off-screen-menu.active{
     left: 0;
-}
-
-#hammenu__nav {
-    padding: 1rem;
-    display: flex;
-    align-items: center;
-    background-color: $color-pharaos-gold;
 }
 
 .ham-menu {
