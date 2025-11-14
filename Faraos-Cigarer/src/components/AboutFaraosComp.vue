@@ -98,7 +98,6 @@ const isExpanded = ref(false);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   background-color: $color-pharaos-gold;
 }
 
@@ -165,6 +164,13 @@ button {
   .about-section {
     margin: 0;
     padding-bottom: 0;
+    display: flex;
+    justify-content: start;
+    padding-left: 2rem;
+  }
+
+  .about-section h2 {
+    padding: 0;
   }
 
   .about-content {
@@ -213,9 +219,15 @@ button {
 
 @media (min-width: 1200px) {
   .desktop-text {
-    padding: 4rem;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding-left: 14rem;
+  }
+
+  .roar-image {
+    padding-right: 14rem;
+  }
+
+  .about-section {
+    padding-left: 14rem;
   }
 }
 </style>

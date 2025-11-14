@@ -43,10 +43,17 @@ const categories = [
   .promo-section {
     margin: 0 auto;
     display: flex;
-    justify-content: row;
     flex-wrap: nowrap;
+    justify-content: space-between;
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .promo-section {
+    padding-left: 14rem;
+    padding-right: 14rem;
   }
 }
 </style>

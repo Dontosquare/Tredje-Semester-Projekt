@@ -63,11 +63,10 @@ defineProps({
     padding: 0.5rem 1rem;
     font-size: clamp(1rem, 2vw, 3rem);
   }
-
-  @media (min-width: 1200px) {
-    .promo-card img {
-      width: 23rem;
-    }
+}
+@media (min-width: 1200px) {
+  .promo-card img {
+    width: 22rem;
   }
 }
 </style>
