@@ -59,7 +59,7 @@ const isExpanded = ref(false);
         til manga og merchandise.
       </p>
       <p>
-        Du finder os i København, Aarhus, Odense og Lyngby - med i alt ni
+        Du finder os i København, Aarhus, Odense og Lyngby - med i alt 9
         butikker, hvor hver afdeling har sine egne specialister klar til at
         hjælpe dig, uanset om du er til superhelte, samlekort, figurer eller
         fantasy-universer.
