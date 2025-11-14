@@ -79,7 +79,7 @@ function toggleSection(id) {
 
       <div class="header__controls">
         <nav id="hammenu__nav" class="off-screen-menu" :class="{ active: isMenuActive }">
-          <img alt="faraos logo" class="header__logo" src="../assets/image/faraos-cigarer-logo-svg.svg">
+          <img alt="faraos logo" class="header__logo__burgermenu" src="../assets/image/faraos-cigarer-logo-svg.svg">
           <form id="searchform">
           <input class="header__input__burgermenu" type="text" placeholder="" aria-label="søgefelt"/>
           <button class="header__icon__search__burgermenu"><FontAwesomeIcon :icon="faMagnifyingGlass" aria-label="søgikon"/></button>
@@ -311,6 +311,15 @@ function toggleSection(id) {
   padding-top: 1rem;
 }
 
+.header__logo__burgermenu {
+  display: flex;
+  justify-content: center;
+  width:  250px;
+  height: auto;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
 #searchform {
   background: grey;
   border-radius: 25px;
@@ -373,7 +382,6 @@ function toggleSection(id) {
 .header__icon__burgermenu {
   white-space: nowrap;
   background-color: #000000;
-  margin: auto;
 }
 
 .header__icon__basket {
