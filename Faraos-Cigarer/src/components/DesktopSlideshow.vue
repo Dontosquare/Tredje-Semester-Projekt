@@ -188,15 +188,15 @@ onUnmounted(() => {
   }
 }
 
-// @media (min-width: 800px) {
-//   .slideshow {
-//     display: block;
-//   }
+@media (min-width: 1200px) {
+  .slideshow {
+    padding: 4rem;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
 
-//   .slideshow {
-//     padding: 4rem;
-//     padding-bottom: 0;
-//     padding-top: 0;
-//   }
-// }
+  .slideshow__firkanter {
+    padding-left: 4rem;
+  }
+}
 </style>

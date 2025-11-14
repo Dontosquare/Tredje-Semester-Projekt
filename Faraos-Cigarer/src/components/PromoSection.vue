@@ -41,11 +41,12 @@ const categories = [
 
 @media (min-width: 601px) {
   .promo-section {
-    width: 75%;
     margin: 0 auto;
     display: flex;
     justify-content: row;
     flex-wrap: nowrap;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }
 </style>
