@@ -65,8 +65,5 @@ defineProps({
   }
 }
 @media (min-width: 1200px) {
-  .promo-card img {
-    width: 22rem;
-  }
 }
 </style>
