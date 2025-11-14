@@ -190,10 +190,11 @@ function toggleSection(id) {
 .ham-menu__burgermenu {
     height: 50px;
     width: 50px;
-    margin: auto;
+    margin-right: 2rem;
     position: relative;
     background-color: black;
 }
+
 
 .ham-menu__burgermenu span{
     height: 2px;
@@ -341,6 +342,7 @@ function toggleSection(id) {
   justify-content: center;
   width:  290px;
   height: auto;
+  padding-bottom: 1rem;
 }
 
 #searchform {
