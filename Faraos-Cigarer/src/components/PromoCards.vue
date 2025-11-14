@@ -24,7 +24,7 @@ defineProps({
 }
 
 .promo-card img {
-  width: 25rem;
+  min-width: 22rem;
   height: auto;
   object-fit: cover;
   box-shadow: 0.44rem 0.44rem rgba(0, 0, 0, 0.25);
@@ -65,5 +65,8 @@ defineProps({
   }
 }
 @media (min-width: 1200px) {
+  .promo-card__image {
+    min-width: 50%;
+  }
 }
 </style>
