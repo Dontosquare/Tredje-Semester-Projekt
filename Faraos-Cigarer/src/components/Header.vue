@@ -71,16 +71,16 @@ const burgerMenuHelp = ref([
     ],
   },
   {
-    id: 'KlubFaraos',
-    title: 'KLUB FARAOS',
+    id: 'aabningstider',
+    title: 'BUTIKKER & ÅBNINGSTIDER',
     items: [
       { id: 'f1', title: 'Find alle de lokale butikker på Fyn!', url: '#' },
       { id: 'f2', title: 'Odense', url: '/information' },
     ],
   },
   {
-    id: 'Nyheder',
-    title: 'NYHEDER',
+    id: 'om faraos',
+    title: 'OM FARAOS CIGARER',
     items: [
       { id: 's1', title: 'Find alle de lokale butikker på Sjælland!', url: '#' },
       { id: 's2', title: 'København comics & potter', url: '#' },
@@ -89,8 +89,8 @@ const burgerMenuHelp = ref([
     ],
   },
   {
-    id: 'Tilbud',
-    title: 'TILBUD',
+    id: 'kontakt os',
+    title: 'KONTAKT OS',
     items: [
       { id: 's1', title: 'Find alle de lokale butikker på Sjælland!', url: '#' },
       { id: 's2', title: 'København comics & potter', url: '#' },
