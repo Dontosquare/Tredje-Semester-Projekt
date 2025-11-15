@@ -231,13 +231,12 @@ import SocialsSection from "./SocialsSection.vue";
 .community-section__news {
   width: 100%;
   height: 11rem;
-  background-color: $color-pharaos-gold;
+  background-color: $color-anubis-black;
   background-image: url("@/assets/image/community_3.webp");
   background-repeat: no-repeat;
   background-position: 1rem center;
   color: $color-newspaper-white;
   font-family: $font-boogaloo;
-  -webkit-text-stroke: 0.1rem $color-anubis-black;
   font-size: 2.44rem;
   font-weight: 400;
   cursor: pointer;
@@ -285,7 +284,7 @@ import SocialsSection from "./SocialsSection.vue";
 
 @media (min-width: 1200px) {
     .community-section {
-    padding: 14rem;
+    padding: 20rem;
     padding-top: 0rem;
     padding-bottom: 4rem;
   }
@@ -294,7 +293,7 @@ import SocialsSection from "./SocialsSection.vue";
   .community-section__klub-faraos,
   .community-section__news,
   .community-section__socials {
-    height: 14rem;
+    height: 20rem;
   }
 }
 </style>

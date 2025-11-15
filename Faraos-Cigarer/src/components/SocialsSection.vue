@@ -132,11 +132,27 @@ import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
 }
 
 @media (min-width: 1200px) {
+
   .socials-section__facebook,
   .socials-section__instagram,
   .socials-section__tiktok,
   .socials-section__twitter {
-    height: 6.5rem;
+    height: 9.5rem;
+    font-size: 2rem;
+  }
+
+  .socials-section__facebook :deep(svg),
+  .socials-section__instagram :deep(svg),
+  .socials-section__tiktok :deep(svg),
+  .socials-section__twitter :deep(svg) {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1rem;
+  }
+
+  .socials-section__instagram :deep(svg),
+  .socials-section__twitter :deep(svg) {
+    stroke-width: 1.4rem;
   }
 }
 </style>
