@@ -47,18 +47,22 @@ const footerSections = [
 
 <template>
     <footer>
-        <FooterList v-for="(section, index) in footerSections" :key="index" :title="section.title" :menu-items="section.items" />
+        <FooterList v-for="(section, index) in footerSections" :key="index" :title="section.title"
+            :menu-items="section.items" />
         <div class="footer-info--wrapper" aria-label="Kontaktinformationer">
             <div class="footer-info" aria-label="Kontaktinformation">
-                <img class="footer-info--img" src="../assets/icons/phone-icon.svg" alt="Et gult ikon af en telefon" aria-label="kontaktikon"/>
+                <img class="footer-info--img" src="../assets/icons/phone-icon.svg" alt="Et gult ikon af en telefon"
+                    aria-label="kontaktikon" />
                 <p class="footer-info--text" aria-label="kontaktinfo - telefon nummer">33 32 22 11</p>
             </div>
             <div class="footer-info" aria-label="Kontaktinformation">
-                <img class="footer-info--img" src="../assets/icons/mail-icon.svg" alt="Et gult ikon af en telefon" aria-label="kontaktikon"/>
+                <img class="footer-info--img" src="../assets/icons/mail-icon.svg" alt="Et gult ikon af en telefon"
+                    aria-label="kontaktikon" />
                 <p class="footer-info--text" aria-label="kontaktinfo - mail">faraos@faraos.dk</p>
             </div>
             <div class="footer-info" aria-label="Kontaktinformation">
-                <img class="footer-info--img" src="../assets/icons/location-icon.svg" alt="Et gult ikon af en telefon" aria-label="kontaktikon" />
+                <img class="footer-info--img" src="../assets/icons/location-icon.svg" alt="Et gult ikon af en telefon"
+                    aria-label="kontaktikon" />
                 <p class="footer-info--text" aria-label="kontaktinfo - adresse">Skindergade 27, 1159 København K</p>
             </div>
         </div>
@@ -90,14 +94,39 @@ const footerSections = [
         <div class="footer-payments" aria-label="betalingsmetoder">
             <p class="footer-payments--text" aria-label="Godkendt af e-handelsfonden">Godkendt af e-handelsfonden</p>
             <div class="footer-payments--img-wrapper">
-                <img class="footer-payments--img" src="../assets/icons/master-card-icon.svg" alt="Et ikon af mastercards logo" aria-label="Mastercard ikon" />
-                <img class="footer-payments--img" src="../assets/icons/visa-icon.svg" alt="Et ikon af visas logo" aria-label="Visa ikon" />
-                <img class="footer-payments--img" src="../assets/icons/visa-elec-icon.svg" alt="Et ikon af Visa Electronics logo" aria-label="Visa Electronic ikon" />
-                <img class="footer-payments--img" src="../assets/icons/dk-icon.svg" alt="Et ikon af dankorts logo" aria-label="Dankort ikon" />
-                <img class="footer-payments--img" src="../assets/icons/faktura-icon.svg" alt="Et ikon af Fakturas logo" aria-label="Faktura ikon" />
+                <img class="footer-payments--img" src="../assets/icons/master-card-icon.svg"
+                    alt="Et ikon af mastercards logo" aria-label="Mastercard ikon" />
+                <img class="footer-payments--img" src="../assets/icons/visa-icon.svg" alt="Et ikon af visas logo"
+                    aria-label="Visa ikon" />
+                <img class="footer-payments--img" src="../assets/icons/visa-elec-icon.svg"
+                    alt="Et ikon af Visa Electronics logo" aria-label="Visa Electronic ikon" />
+                <img class="footer-payments--img" src="../assets/icons/dk-icon.svg" alt="Et ikon af dankorts logo"
+                    aria-label="Dankort ikon" />
+                <img class="footer-payments--img" src="../assets/icons/faktura-icon.svg" alt="Et ikon af Fakturas logo"
+                    aria-label="Faktura ikon" />
             </div>
-            <a href="" class="footer-payments--text" aria-label="Link til trustpilot">Gå til Trustpilot</a>
-            <p class="footer-payments--text" aria-label="Faraos Cigarer CVR: 17272241">© Faraos Cigarer Aps Cvr 17272241</p>
+            <a href="" class="footer--text" aria-label="Link til trustpilot">Gå til Trustpilot</a>
+            <p class="footer--text" aria-label="Faraos Cigarer CVR: 17272241">© Faraos Cigarer Aps Cvr 17272241
+            </p>
+        </div>
+        <div class="desktop-information" aria-label="Informationsbjælke til desktop">
+            <p>© Faraos Cigarer Aps Cvr 17272241</p>
+            <div class="footer-info" aria-label="Kontaktinformation">
+                <img class="footer-info--img" src="../assets/icons/phone-icon.svg" alt="Et gult ikon af en telefon"
+                    aria-label="kontaktikon" />
+                <p class="footer-info--text" aria-label="kontaktinfo - telefon nummer">33 32 22 11</p>
+            </div>
+            <div class="footer-info" aria-label="Kontaktinformation">
+                <img class="footer-info--img" src="../assets/icons/mail-icon.svg" alt="Et gult ikon af en mail"
+                    aria-label="kontaktikon" />
+                <p class="footer-info--text" aria-label="kontaktinfo - mail">faraos@faraos.dk</p>
+            </div>
+            <div class="footer-info" aria-label="Kontaktinformation">
+                <img class="footer-info--img" src="../assets/icons/location-icon.svg" alt="Et gult ikon af en lokation"
+                    aria-label="kontaktikon" />
+                <p class="footer-info--text" aria-label="kontaktinfo - adresse">Skindergade 27, 1159 København K</p>
+            </div>
+            <a>Gå til Trustpilot</a>
         </div>
     </footer>
 </template>
@@ -172,7 +201,8 @@ footer {
         align-items: center;
         flex-direction: column;
 
-        .footer-payments--text {
+        .footer-payments--text,
+        .footer--text {
             color: $color-newspaper-white;
             font-family: $font-play;
             font-size: 1rem;
@@ -199,6 +229,78 @@ footer {
 
             .footer-payments--img {
                 margin: 0.5rem;
+            }
+        }
+    }
+
+    .desktop-information {
+        display: none; // Hide on mobile by default
+    }
+
+    // Desktop layout - horizontal menus
+    @media (min-width: 1201px) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: left;
+        gap: 2rem;
+        max-width: 100%;
+
+        .footer-info--wrapper {
+            display: none; // Hide contact info on desktop
+        }
+
+        .footer-logos {
+            display: none; // Hide social media icons on desktop
+        }
+
+        .footer--text {
+            display: none;
+        }
+
+        .footer-payments {
+            width: 100%;
+            padding-top: 0rem;
+            padding-left: 13rem;
+            border-top: none;
+            align-items: flex-start; // Align to the left
+        }
+
+        .desktop-information {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 2rem 13rem;
+            padding-top: 0rem;
+
+            p, a {
+                color: $color-newspaper-white;
+                font-family: $font-play;
+                font-size: 0.8rem;
+                text-decoration: none;
+                margin: 0;
+            }
+
+            a:hover {
+                color: $color-tactical-blue;
+            }
+
+            .footer-info {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+
+                .footer-info--img {
+                    width: 1.5rem;
+                    height: 1.5rem;
+                }
+
+                .footer-info--text {
+                    color: $color-newspaper-white;
+                    font-family: $font-play;
+                    font-size: 0.8rem;
+                    margin: 0;
+                }
             }
         }
     }

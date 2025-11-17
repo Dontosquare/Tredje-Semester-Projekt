@@ -45,15 +45,16 @@ const toggleMenu = () => {
     .footer-lists--toggle {
         display: flex;
         padding: 1rem 2rem;
-        display: flex;
         justify-content: space-between;
         cursor: pointer;
+        margin-top: 2rem;
 
         h3 {
             font-family: $font-boogaloo;
             color: $color-newspaper-white;
-            font-size: 1.5rem;
+            font-size: 2rem;
             letter-spacing: 1.5px;
+            margin: 0;
         }
 
         img {
@@ -78,11 +79,44 @@ const toggleMenu = () => {
                 color: $color-newspaper-white;
                 font-size: 1.3rem;
             }
+
+            .footer-lists__menu--links:hover {
+                color: $color-tactical-blue;
+            }
         }
 
         li:last-child {
             margin-bottom: 0rem;
         }
+    }
+}
+
+@media (min-width: 1201px) {
+    .footer-lists {
+        border: none;
+    }
+    
+    .footer-lists:first-of-type {
+        padding-left: 15rem;
+    }
+    
+    .footer-lists--toggle {
+        padding-left: 15rem;
+        cursor: default;
+        pointer-events: none;
+
+        img {
+            display: none; // Hide the arrow on desktop
+        }
+
+        h3 {
+            margin-bottom: 1rem;
+        }
+    }
+
+    .footer-lists__menu {
+        display: block !important; // Always show menu on desktop
+        padding: 0;
     }
 }
 </style>
