@@ -6,6 +6,7 @@ import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { ref } from "vue";
 import { useRouter } from "vue-router";
 import { onMounted } from "vue";
+import  HeaderData  from "../Headerdata.json";
 
 const isMenuActive = ref(false);
 const togglemenu = () => {
@@ -20,117 +21,65 @@ onMounted(() => {
   });
 });
 
-const booksAndComics = {
-  title: "Bøger og tegneserier",
-  items: [
-    {
-      title: "Tegneserier",
-      items: [
-        { title: "Amerikanske superhelte" },
-        { title: "Europæiske klassikere" },
-        { title: "Manga / Anime" },
-        { title: "Uafhængige / graphic novels" }
-      ]
-    },
-    {
-      title: "Bøger",
-      items: [
-        { title: "Science fiction" },
-        { title: "Fantasy" },
-        { title: "Horror" },
-        { title: "Kunst- & referencebøger" },
-        { title: "Magasiner & zines" }
-      ]
-    }
-  ]
-};
+class MenuSection {
+  constructor(id, title, items = []) {
+    this.id = id;
+    this.title = title;
+    this.items = items;
+  }
 
-const retro = {
-  title: "Retro",
-  items: [
-    { title: "Retrospil" },
-    { title: "Vintage tegneserier" },
-    { title: "Samleobjekter & figurer" },
-    { title: "Brætspil fra 80/90'erne" },
-    { title: "Brugte varer" }
-  ]
-};
+  addItem(item) {
+    this.items.push(item);
+  }
+}
 
-const merchandise = {
-  title: "Merchandise",
-  items: [
-    { title: "Samlefigurer" },
-    { title: "Plakater & prints" },
-    { title: "Tøj & accessories" },
-    { title: "Krus, tasker & gadgets" },
-    { title: "Nøgleringe & badges" },
-    {
-      title: "Universer",
-      items: [
-        { title: "Star Wars" },
-        { title: "Marvel" },
-        { title: "Dungeons & Dragons" },
-        { title: "Studio Ghibli" }
-      ]
-    }
-  ]
-};
+class MenuItem {
+  constructor(id, title, url = "#", subItems = []) {
+    this.id = id;
+    this.title = title;
+    this.url = url;
+    this.subItems = subItems;
+  }
 
-const games = {
-  title: "Spil",
-  items: [
-    {
-      title: "Brætspil",
-      items: [
-        { title: "Familiespil" },
-        { title: "Strategispil" },
-        { title: "Partyspil" },
-        { title: "Solo-spil" }
-      ]
-    },
-    {
-      title: "Rollespil",
-      items: [
-        { title: "Regelbøger" },
-        { title: "Kampagner & scenarier" },
-        { title: "Terninger & tilbehør" }
-      ]
-    }
-  ]
-};
+  addSubItem(item) {
+    this.subItems.push(item);
+  }
+}
 
-const burgerMenuSelection = ref([
-  booksAndComics,
-  retro,
-  merchandise,
-  games
-]);
+class MenuCategory {
+  constructor(id, title, items = []) {
+    this.id = id;
+    this.title = title;
+    this.items = items;
+  }
 
-const burgerMenuHelp = ref([
-  {
-    id: 'Kundeservice',
-    title: 'KUNDESERVICE',
-  },
-  {
-    id: 'aabningstider',
-    title: 'BUTIKKER & ÅBNINGSTIDER',
-  },
-  {
-    id: 'om faraos',
-    title: 'OM FARAOS CIGARER',
-  },
-  {
-    id: 'kontakt os',
-    title: 'KONTAKT OS',
-  },
-]);
+  addItem(item) {
+    this.items.push(item);
+  }
+}
+
+const burgerMenuSelection = HeaderData.map(obj =>
+  new MenuCategory(obj.id, obj.title, obj.items))
+
+
+console.log(burgerMenuSelection);
+
+
 
 
 const openSection = ref(null);
 
+const openCategory = ref(null);
+
 function toggleSection(id) {
   openSection.value = openSection.value === id ? null : id;
 }
+
+function toggleCategory(id) {
+  openCategory.value = openCategory.value === id ? null : id;
+}
+
+
 </script>
 
 <template>
@@ -161,23 +110,29 @@ function toggleSection(id) {
             </div>
           </div>
 
-          <div v-for="section in burgerMenuSelection" :key="section.id" class="burgermenu__sektion" @click="toggleMenu"
-             aria-label="burgermenu punkter">
-              <button class="burgermenu__section--button" @click="toggleSection(section.id)" aria-label="åben/luk felt">
-                 {{ section.title }}
-                <FontAwesomeIcon :icon="faAngleDown" :class="{ 'rotate-180': openSection === section.id }" class="burgermenu__ikon"
-                aria-label="åben/luk pil" />
-              </button>
-      <transition name="slide-fade">
-        <div class="listitem__controls">
-          <ul v-if="openSection === section.id" class="burgermenu__section__boks" aria-label="informations boks">
-            <li v-for="item in section.items" :key="item.id" class="burgermenu__section__listitem">
-              <RouterLink :to="item.url" class="burgermenu__links">{{ item.title }}</RouterLink>
+        <div v-for="section in burgerMenuSelection" :key="section.id" class="burgermenu__sektion" @click="toggleMenu" aria-label="burgermenu punkter">
+          <button class="burgermenu__section--button" @click="toggleSection(section.id)" aria-label="åben/luk felt">
+                {{ section.title }}
+              <FontAwesomeIcon :icon="faAngleDown" :class="{ 'rotate-180': openSection === section.id }" class="burgermenu__ikon"
+              aria-label="åben/luk pil" />
+            </button>
+          <ul v-if="openSection === section.id" id="menu" class="header__hammenu__list" aria-label="burgermenu liste"> 
+            <li v-for="categoryItem in section.items" :key="categoryItem.id" class="burgermenu__sektion" @click="toggleMenu" aria-label="burgermenu punkter">
+            <button class="burgermenu__section--button" @click="toggleCategory(categoryItem.id)" aria-label="åben/luk felt">
+                {{ categoryItem.title }}
+              <FontAwesomeIcon :icon="faAngleDown" :class="{ 'rotate-180': openCategory === categoryItem.id }" class="burgermenu__ikon"
+              aria-label="åben/luk pil" />
+            </button>
+              <div class="listitem__controls">
+                <ul v-if="openCategory === categoryItem.id" class="burgermenu__section__boks" aria-label="informations boks">
+                  <li v-for="item in categoryItem.items" :key="item.id" class="burgermenu__section__listitem">
+                    <RouterLink :to="item.url" class="burgermenu__links">{{ item.title }}</RouterLink>
+                  </li>
+                </ul>
+              </div>
             </li>
           </ul>
         </div>
-      </transition>
-    </div>
 
           <h2 class="burgermenu__service__overskrift">HAR DU BRUG FOR HJÆLP?</h2>
 
