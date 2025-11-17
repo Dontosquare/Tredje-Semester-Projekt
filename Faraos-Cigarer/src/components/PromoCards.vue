@@ -24,7 +24,7 @@ defineProps({
 }
 
 .promo-card img {
-  min-width: 22rem;
+  width: 100%;
   height: auto;
   object-fit: cover;
   box-shadow: 0.44rem 0.44rem rgba(0, 0, 0, 0.25);
@@ -60,13 +60,25 @@ defineProps({
   .promo-card button {
     width: fit-content;
     white-space: nowrap;
-    padding: 0.5rem 1rem;
     font-size: clamp(1rem, 2vw, 3rem);
   }
 }
 @media (min-width: 1200px) {
   .promo-card__image {
     min-width: 50%;
+  }
+
+  .promo-card button {
+    font-size: 103%;
+    padding: 0.4rem 0.8rem;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 1600px) {
+  .promo-card button {
+    font-size: 150%;
+    padding: 0.6rem 1.2rem;
   }
 }
 </style>
