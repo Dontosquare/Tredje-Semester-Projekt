@@ -209,6 +209,15 @@ function toggleSection(id) {
     gap: 1rem;
 }
 
+.off-screen-menu { 
+    background-image: url("../assets/image/community_1.webp");
+    background-repeat: no-repeat;
+    background-size: 65%;
+    background-position: 0 36rem;
+    background-image: reverse;
+}
+
+
 #menu {
     list-style: none;
     font-family: "play";
