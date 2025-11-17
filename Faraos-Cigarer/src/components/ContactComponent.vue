@@ -52,14 +52,12 @@ import FaraosCigarerRoar from "@/assets/image/faraos-cigarer-roar.webp";
           <li>Kristi Himmelfartsdag</li>
           <li>Grundlovsdag</li>
         </ul>
-        <div class="closing-days--content__text">
-          <ul>
-            <li>1. og 2. pinsedag</li>
-            <li>Juleaftensdag</li>
-            <li>1. og 2. juledag</li>
-            <li>Nytårsaftensdag (Lukker fra kl. 15)</li>
-          </ul>
-        </div>
+        <ul>
+          <li>1. og 2. pinsedag</li>
+          <li>Juleaftensdag</li>
+          <li>1. og 2. juledag</li>
+          <li>Nytårsaftensdag (Lukker fra kl. 15)</li>
+        </ul>
         <img
           :src="FaraosCigarerRoar"
           alt="Bil som laver en lyd"
@@ -191,13 +189,13 @@ import FaraosCigarerRoar from "@/assets/image/faraos-cigarer-roar.webp";
 @media (min-width: 1200px) {
   .contact__wrapper {
     display: flex;
-    padding-left: 20rem;
-    padding-right: 20rem;
+    padding-left: 15rem;
+    padding-right: 15rem;
   }
 
   .closing-days__wrapper {
-    padding-left: 20rem;
-    padding-right: 20rem;
+    padding-left: 15rem;
+    padding-right: 15rem;
   }
 }
 </style>
