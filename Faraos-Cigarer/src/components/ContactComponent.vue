@@ -153,7 +153,6 @@ import FaraosCigarerRoar from "@/assets/image/faraos-cigarer-roar.webp";
 
   .contact {
     margin: 0;
-    margin-left: 2rem;
     width: 30%;
   }
 
