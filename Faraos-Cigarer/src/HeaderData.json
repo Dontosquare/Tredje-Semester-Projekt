@@ -1,0 +1,97 @@
+[{ "title": "Katagorier",
+  "id": 0,
+  "items":
+  [
+    {
+      "id": 1,
+      "title": "Bøger og tegneserier",
+      "url": "#",
+      "items": [
+        {
+          "title": "Tegneserier",
+          "url": "#",
+          "items": [
+            { "title": "Amerikanske superhelte", "url": "#" },
+            { "title": "Europæiske klassikere", "url": "#" },
+            { "title": "Manga / Anime", "url": "#" },
+            { "title": "Uafhængige / graphic novels", "url": "#" }
+          ]
+        },
+        {
+          "title": "Bøger",
+          "url": "#",
+          "items": [
+            { "title": "Science fiction", "url": "#" },
+            { "title": "Fantasy", "url": "#" },
+            { "title": "Horror", "url": "#" },
+            { "title": "Kunst- & referencebøger", "url": "#" },
+            { "title": "Magasiner & zines", "url": "#" }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": 2,
+      "title": "Retro",
+      "url": "#",
+      "items": [
+        { "title": "Retrospil", "url": "#" },
+        { "title": "Vintage tegneserier", "url": "#" },
+        { "title": "Samleobjekter & figurer", "url": "#" },
+        { "title": "Brætspil fra 80/90'erne", "url": "#" },
+        { "title": "Brugte varer", "url": "#" }
+      ]
+    },
+
+    {
+      "id": 3,
+      "title": "Merchandise",
+      "url": "#",
+      "items": [
+        { "title": "Samlefigurer", "url": "#" },
+        { "title": "Plakater & prints", "url": "#" },
+        { "title": "Tøj & accessories", "url": "#" },
+        { "title": "Krus, tasker & gadgets", "url": "#" },
+        { "title": "Nøgleringe & badges", "url": "#" },
+        {
+          "title": "Universer",
+          "url": "#",
+          "items": [
+            { "title": "Star Wars", "url": "#" },
+            { "title": "Marvel", "url": "#" },
+            { "title": "Dungeons & Dragons", "url": "#" },
+            { "title": "Studio Ghibli", "url": "#" }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": 4,
+      "title": "Spil",
+      "url": "#",
+      "items": [
+        {
+          "title": "Brætspil",
+          "url": "#",
+          "items": [
+            { "title": "Familiespil", "url": "#" },
+            { "title": "Strategispil", "url": "#" },
+            { "title": "Partyspil", "url": "#" },
+            { "title": "Solo-spil", "url": "#" }
+          ]
+        },
+        {
+          "title": "Rollespil",
+          "url": "#",
+          "items": [
+            { "title": "Regelbøger", "url": "#" },
+            { "title": "Kampagner & scenarier", "url": "#" },
+            { "title": "Terninger & tilbehør", "url": "#" }
+          ]
+        }
+      ]
+    }
+  ]
+}]
