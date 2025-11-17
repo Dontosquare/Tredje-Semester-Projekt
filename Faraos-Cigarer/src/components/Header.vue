@@ -20,97 +20,88 @@ onMounted(() => {
   });
 });
 
-const burgerMenuSelection = ref([
+const burgerMenuSelection = ref(
+[
   {
-    id: 'Kategorier',
-    title: 'KATEGORIER',
-    items: [
-      { 
-        id: 'K1', 
-        title: 'Bøger og tegneserier', 
-        url: '#',
-        subItems: [
-          { 
-          id: 'K1a', 
-          title: 'Bøger og Tegneserier', 
-          url: '#', 
-          subItems_1: [
-            { id: 'K1a1', title: 'Fantasy', url: '#' },
-            { id: 'K1a2', title: 'Science Fiction', url: '#' },
-            { id: 'K1a3', title: 'Manga', url: '#' },
-          ],
-          subItems_2: [
-            { id: 'K1b1', title: 'Graphic Novels', url: '#' },
-            { id: 'K1b2', title: 'Superhelte', url: '#' },
-            { id: 'K1b3', title: 'Humor', url: '#' },
-          ]
-        },
-      
-          
+    "title": "Bøger og tegneserier",
+    "items": [
+      {
+        "title": "Tegneserier",
+        "items": [
+          { "title": "Amerikanske superhelte" },
+          { "title": "Europæiske klassikere" },
+          { "title": "Manga / Anime" },
+          { "title": "Uafhængige / graphic novels" }
         ]
       },
-
-
-
-
-
-      
-      { id: 'K2', title: 'Aarhus games', url: '#' },
-      { id: 'K3', title: 'Aarhus comics', url: '#' },
-    ],
+      {
+        "title": "Bøger",
+        "items": [
+          { "title": "Science fiction" },
+          { "title": "Fantasy" },
+          { "title": "Horror" },
+          { "title": "Kunst- & referencebøger" },
+          { "title": "Magasiner & zines" }
+        ]
+      }
+    ]
   },
+
   {
-    id: 'Kategorier',
-    title: 'KLUB FARAOS',
-    items: [
-      { 
-        id: 'K1', 
-        title: 'Bøger og tegneserier', 
-        url: '#',
-        subItems: [
-          { id: 'K1a', title: 'Fantasy', url: '#' },
-          { id: 'K1b', title: 'Science Fiction', url: '#' },
-          { id: 'K1c', title: 'Manga', url: '#' },
+    "title": "Retro",
+    "items": [
+      { "title": "Retrospil" },
+      { "title": "Vintage tegneserier" },
+      { "title": "Samleobjekter & figurer" },
+      { "title": "Brætspil fra 80/90'erne" },
+      { "title": "Brugte varer" }
+    ]
+  },
+
+  {
+    "title": "Merchandise",
+    "items": [
+      { "title": "Samlefigurer" },
+      { "title": "Plakater & prints" },
+      { "title": "Tøj & accessories" },
+      { "title": "Krus, tasker & gadgets" },
+      { "title": "Nøgleringe & badges" },
+      {
+        "title": "Universer",
+        "items": [
+          { "title": "Star Wars" },
+          { "title": "Marvel" },
+          { "title": "Dungeons & Dragons" },
+          { "title": "Studio Ghibli" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "title": "Spil",
+    "items": [
+      {
+        "title": "Brætspil",
+        "items": [
+          { "title": "Familiespil" },
+          { "title": "Strategispil" },
+          { "title": "Partyspil" },
+          { "title": "Solo-spil" }
         ]
       },
-      { id: 'K2', title: 'Aarhus games', url: '#' },
-      { id: 'K3', title: 'Aarhus comics', url: '#' },
-    ],
-  },
-  {
-    id: 'KlubFaraos',
-    title: 'NYHEDER',
-    items: [
-      { 
-        id: 'f1', 
-        title: 'Find alle de lokale butikker på Fyn!', 
-        url: '#',
-        subItems: [
-          { id: 'f1a', title: 'Odense C', url: '#' },
-          { id: 'f1b', title: 'Odense V', url: '#' },
+      {
+        "title": "Rollespil",
+        "items": [
+          { "title": "Regelbøger" },
+          { "title": "Kampagner & scenarier" },
+          { "title": "Terninger & tilbehør" }
         ]
-      },
-      { id: 'f2', title: 'Odense', url: '/information' },
-    ],
-  },
-  {
-    id: 'KlubFaraos',
-    title: 'TILBUD',
-    items: [
-      { 
-        id: 'K1', 
-        title: 'Find alle de lokale butikker på Fyn!', 
-        url: '#',
-        subItems: [
-          { id: 'f1a', title: 'Odense C', url: '#' },
-          { id: 'f1b', title: 'Odense V', url: '#' },
-        ]
-      },
-      { id: 'f2', title: 'Odense', url: '/information' },
-    ],
-  },
-]);
-
+      }
+    ]
+  }
+]
+);
 const burgerMenuHelp = ref([
   {
     id: 'Kundeservice',
