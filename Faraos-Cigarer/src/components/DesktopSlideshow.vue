@@ -200,7 +200,7 @@ onUnmounted(() => {
   }
 
   .slideshow__firkanter {
-    padding-left: 20rem;
+    padding-left: 15rem;
   }
 }
 </style>
