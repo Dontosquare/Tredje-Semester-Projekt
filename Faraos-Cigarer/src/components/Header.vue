@@ -126,7 +126,9 @@ function toggleCategory(id) {
               <div class="listitem__controls">
                 <ul v-if="openCategory === categoryItem.id" class="burgermenu__section__boks" aria-label="informations boks">
                   <li v-for="item in categoryItem.items" :key="item.id" class="burgermenu__section__listitem">
+                    
                     <RouterLink :to="item.url" class="burgermenu__links">{{ item.title }}</RouterLink>
+                  
                   </li>
                 </ul>
               </div>
