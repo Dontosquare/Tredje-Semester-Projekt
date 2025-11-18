@@ -82,17 +82,20 @@ import { RouterLink } from "vue-router";
 @import "../assets/main.scss";
 header {
   width: 100%;
+  box-shadow: 0rem 0.4rem rgba(0, 0, 0, 0.25);
   background-color: aqua;
 }
 
 .header-logo-mini-wrapper {
   display: flex;
   justify-content: space-between;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 .header-logo-mini-wrapper ul {
   display: flex;
-  padding: 1rem;
+  padding-top: 1rem;
   gap: 1rem;
 
   li {
@@ -109,25 +112,61 @@ header {
 
 .header-logo-mini-wrapper img {
   width: 100%;
-  padding: 2rem;
+  padding: 2rem 0rem;
 }
 
 .header-buttons-search-wrapper {
   display: flex;
   justify-content: space-between;
+}
 
+.header-button_wrapper {
   ul {
+    display: flex;
+    gap: 1rem;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+
     li {
+      padding: 1rem;
+      min-width: 4rem;
       list-style-type: none;
+      font-family: $font-boogaloo;
+      background-color: $color-anubis-black;
+      text-align: center;
+      box-shadow: 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
 
       .button {
         text-decoration: none;
+        color: $color-newspaper-white;
       }
     }
   }
 }
 
-.header-button_wrapper {
+#searchform {
+  background: grey;
+  border-radius: 25px;
+  width: 60%;
+  position: relative;
   display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 1200px) {
+  .header-logo-mini-wrapper {
+    margin-left: 15rem;
+    margin-right: 15rem;
+  }
+
+  .header-buttons-search-wrapper {
+    margin-left: 15rem;
+    margin-right: 15rem;
+  }
+  .header-button_wrapper {
+    ul {
+      margin-left: 0;
+    }
+  }
 }
 </style>
