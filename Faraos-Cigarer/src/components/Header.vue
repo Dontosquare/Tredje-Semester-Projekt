@@ -505,4 +505,10 @@ function toggleCategory(id) {
 .burgermenu__service__overskrift {
   color: white;
 }
+
+@media (min-width: 601px) {
+  header {
+    display: none;
+  }
+}
 </style>

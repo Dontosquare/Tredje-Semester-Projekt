@@ -12,10 +12,10 @@
           "title": "Tegneserier",
           "url": "#",
           "items": [
-            { "title": "Amerikanske superhelte", "url": "#", "id": 101},
-            { "title": "Europæiske klassikere", "url": "#", "id": 102},
-            { "title": "Manga / Anime", "url": "#" , "id": 103},
-            { "title": "Uafhængige / graphic novels", "url": "#", "id": 104}
+            { "title": "Amerikanske superhelte", "url": "#"},
+            { "title": "Europæiske klassikere", "url": "#"},
+            { "title": "Manga / Anime", "url": "#"},
+            { "title": "Uafhængige / graphic novels", "url": "#"}
           ]
         },
         {
