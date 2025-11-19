@@ -146,7 +146,7 @@ const toggleMenu = () => {
     background-color: $color-pharaos-gold;
     transform: scaleY(0);
     transform-origin: top;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    transition: transform 0.3s ease;
     opacity: 0;
     z-index: 100;
     padding: 1rem;
@@ -155,6 +155,7 @@ const toggleMenu = () => {
 .megamenu-open {
     transform: scaleY(1);
     opacity: 1;
+    box-shadow: 0rem 0.3rem rgba(0, 0, 0, 0.25);
 }
 
 .megamenu ul {
@@ -178,12 +179,12 @@ const toggleMenu = () => {
     width: 8.9rem;
     height: 20rem;
     position: absolute;
+    box-shadow: 0.3rem 0.3rem rgba(0, 0, 0, 0.25);
 }
 
 .decoration-open {
     display: block;
-    // transform: scaleY(0);
-    transform-origin: top;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform: scaleY(1);
+    transition: transform 0.1s ease;
 }
 </style>
