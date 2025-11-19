@@ -42,9 +42,9 @@ const loadList = (category) => {
 
             <div v-if="currentList.length === 0" class="shown-message">
                 <h3 class="msg-title">Hvad er du på udkig efter?</h3>
-                <p class="msg-text">Klik på kategorierne, til venstre for at finde lige netop det produkt du leder
+                <p class="msg-text">Skal du vindues-shoppe, shop-amok eller bare smugkigge på alle vores mange produkter? Så kan du klikke på kategorierne, til venstre for at finde lige netop det produkt du leder
                     efter!</p>
-                <p class="msg-text"><span class="qoute-style">"You have the high ground now" - Faraos Cigarer</span></p>
+                <p class="msg-text"><span>"You have the high ground now" - Obi Wan Kenobi</span></p>
             </div>
 
             <ul v-else>
@@ -80,7 +80,7 @@ const loadList = (category) => {
     }
 
     .cat-button-open {
-        background-color: #efd17a;
+        background-color: $color-pharaos-gold;
     }
 
     .cat-arrow {
@@ -107,10 +107,36 @@ const loadList = (category) => {
         gap: 1rem;
 
         .shown-message {
+            padding: 2rem;
             margin: 2rem;
             margin-left: 0;
             background-color: $color-anubis-black;
             color: $color-newspaper-white;
+
+            .msg-title {
+                font-family: $font-boogaloo;
+                font-weight: normal;
+                font-size: 3rem;
+                color: $color-pharaos-gold;
+                margin-bottom: 2rem;
+            }
+
+            .msg-text {
+                color: $color-newspaper-white;
+                font-size: 1.2rem;
+                font-family: $font-play;
+                
+                span {
+                    font-style: italic;
+                    font-family: $font-play;
+                    opacity: 0.5;
+                }
+            }
+
+            .msg-text:last-of-type {
+                 margin-top: 1rem;
+            }
+
         }
 
         .category-buttons {
@@ -120,7 +146,7 @@ const loadList = (category) => {
             flex-direction: column;
             width: 25%;
             gap: 1rem;
-            
+
             button {
                 box-shadow: 0.3rem 0.3rem rgba(0, 0, 0, 0.25);
                 background-color: $color-anubis-black;
