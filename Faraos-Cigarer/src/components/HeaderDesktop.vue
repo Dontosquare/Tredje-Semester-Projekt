@@ -173,6 +173,8 @@ header {
   border-color: $color-anubis-black;
   background: white;
   color: $color-anubis-black;
+  padding-left: 0.5rem;
+  padding-right: 3rem;
 }
 
 .header__icon__search {
