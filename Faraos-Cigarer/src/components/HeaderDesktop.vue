@@ -4,17 +4,14 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { RouterLink } from "vue-router";
+import MegamenuComp from "./MegamenuComp.vue";
 </script>
 
 <template>
   <header>
     <div class="header-logo-mini-wrapper">
       <div class="header-logo">
-        <img
-          :src="FaraosLogo"
-          alt="Logo for faraos"
-          aria-label="Billed af faraos logo"
-        />
+        <img :src="FaraosLogo" alt="Logo for faraos" aria-label="Billed af faraos logo" />
       </div>
       <div class="header-mini-navigation">
         <ul>
@@ -22,14 +19,10 @@ import { RouterLink } from "vue-router";
             <RouterLink to="/#" class="mini-nav__link">SOCIALS</RouterLink>
           </li>
           <li>
-            <RouterLink to="/Butikker" class="mini-nav__link"
-              >BUTIKKER</RouterLink
-            >
+            <RouterLink to="/Butikker" class="mini-nav__link">BUTIKKER</RouterLink>
           </li>
           <li>
-            <RouterLink to="/Butikker" class="mini-nav__link"
-              >ÅBNINGSTIDER</RouterLink
-            >
+            <RouterLink to="/Butikker" class="mini-nav__link">ÅBNINGSTIDER</RouterLink>
           </li>
           <li>
             <RouterLink to="/#" class="mini-nav__link">KALENDER</RouterLink>
@@ -38,31 +31,32 @@ import { RouterLink } from "vue-router";
             <RouterLink to="/#" class="mini-nav__link">KUNDESERVICE</RouterLink>
           </li>
           <li>
-            <RouterLink to="/#" class="mini-nav__link"
-              >MIN ØNSKELISTE</RouterLink
-            >
+            <RouterLink to="/#" class="mini-nav__link">MIN ØNSKELISTE</RouterLink>
           </li>
-          <li><RouterLink to="/#" class="mini-nav__link">LOGIN</RouterLink></li>
+          <li>
+            <RouterLink to="/#" class="mini-nav__link">LOGIN</RouterLink>
+          </li>
         </ul>
       </div>
     </div>
     <div class="header-buttons-search-wrapper">
       <div class="header-button_wrapper">
         <ul>
-          <li><RouterLink to="/#" class="button">KATEGORIER</RouterLink></li>
-          <li><RouterLink to="/#" class="button">KLUB FARAO</RouterLink></li>
-          <li><RouterLink to="/#" class="button">NYHEDER</RouterLink></li>
-          <li><RouterLink to="/#" class="button">TILBUD</RouterLink></li>
+          <MegamenuComp />
+          <li>
+            <RouterLink to="/#" class="button">KLUB FARAO</RouterLink>
+          </li>
+          <li>
+            <RouterLink to="/#" class="button">NYHEDER</RouterLink>
+          </li>
+          <li>
+            <RouterLink to="/#" class="button">TILBUD</RouterLink>
+          </li>
         </ul>
       </div>
       <div class="search-basket">
         <form class="header-searchform">
-          <input
-            class="header__input"
-            type="text"
-            placeholder=""
-            aria-label="søgefelt"
-          />
+          <input class="header__input" type="text" placeholder="" aria-label="søgefelt" />
           <button class="header__icon__search">
             <FontAwesomeIcon :icon="faMagnifyingGlass" aria-label="søgikon" />
           </button>
@@ -80,6 +74,7 @@ import { RouterLink } from "vue-router";
 
 <style lang="scss" scoped>
 @import "../assets/main.scss";
+
 header {
   width: 100%;
   box-shadow: 0rem 0.4rem rgba(0, 0, 0, 0.25);
@@ -133,11 +128,12 @@ header {
     li {
       padding: 1rem;
       min-width: 4rem;
+      height: 1.1rem;
       list-style-type: none;
       font-family: $font-boogaloo;
       background-color: $color-anubis-black;
       text-align: center;
-      box-shadow: 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+      box-shadow: 0.3rem 0.3rem rgba(0, 0, 0, 0.25);
       white-space: nowrap;
 
       .button {
@@ -150,7 +146,7 @@ header {
 
 .search-basket {
   display: flex;
-  justify-content: flex-end;
+  // justify-content:
   gap: 1rem;
 }
 
@@ -161,7 +157,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 3.3rem;
+  height: 3.1rem;
   box-shadow: 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
 }
 
@@ -170,7 +166,7 @@ header {
   height: 100%;
   width: 60%;
   font-size: 1.5rem;
-  border-color: $color-anubis-black;
+  border: 2px solid $color-anubis-black;
   background: white;
   color: $color-anubis-black;
   padding-left: 0.5rem;
@@ -189,15 +185,22 @@ header {
   cursor: pointer;
 }
 
-.header__icon__basket {
+.header__icon {
+  box-shadow: 0.3rem 0.3rem rgba(0, 0, 0, 0.25);
+  margin-top: -0.15rem;
+  height: 3.1rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0.9rem;
+  width: 3.1rem;
+  background-color: $color-anubis-black;
+  border: 2px solid $color-anubis-black;
+}
+
+.header__icon__basket {
   border: none;
   background-color: $color-anubis-black;
   color: $color-newspaper-white;
-  box-shadow: 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
   font-size: 1.6rem;
   cursor: pointer;
 }
