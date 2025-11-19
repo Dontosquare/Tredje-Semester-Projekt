@@ -21,30 +21,7 @@ onMounted(() => {
   });
 });
 
-class MenuSection {
-  constructor(id, title, items = []) {
-    this.id = id;
-    this.title = title;
-    this.items = items;
-  }
 
-  addItem(item) {
-    this.items.push(item);
-  }
-}
-
-class MenuItem {
-  constructor(id, title, url = "#", subItems = []) {
-    this.id = id;
-    this.title = title;
-    this.url = url;
-    this.subItems = subItems;
-  }
-
-  addSubItem(item) {
-    this.subItems.push(item);
-  }
-}
 
 class MenuCategory {
   constructor(id, title, items = []) {
@@ -140,8 +117,7 @@ function toggleCategory(id) {
         </div>
 
           <h2 class="burgermenu__service__overskrift">HAR DU BRUG FOR HJÆLP?</h2>
-
-
+      
         </nav>
 
         <div class="ham-menu" :class="{ active: isMenuActive }" @click="togglemenu" aria-label="burgermenu knap">
