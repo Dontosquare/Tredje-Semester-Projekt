@@ -11,7 +11,11 @@ import MegamenuComp from "./MegamenuComp.vue";
   <header>
     <div class="header-logo-mini-wrapper">
       <div class="header-logo">
-        <img :src="FaraosLogo" alt="Logo for faraos" aria-label="Billed af faraos logo" />
+        <img
+          :src="FaraosLogo"
+          alt="Logo for faraos"
+          aria-label="Billed af faraos logo"
+        />
       </div>
       <div class="header-mini-navigation">
         <ul>
@@ -19,10 +23,14 @@ import MegamenuComp from "./MegamenuComp.vue";
             <RouterLink to="/#" class="mini-nav__link">SOCIALS</RouterLink>
           </li>
           <li>
-            <RouterLink to="/Butikker" class="mini-nav__link">BUTIKKER</RouterLink>
+            <RouterLink to="/Butikker" class="mini-nav__link"
+              >BUTIKKER</RouterLink
+            >
           </li>
           <li>
-            <RouterLink to="/Butikker" class="mini-nav__link">ÅBNINGSTIDER</RouterLink>
+            <RouterLink to="/Butikker" class="mini-nav__link"
+              >ÅBNINGSTIDER</RouterLink
+            >
           </li>
           <li>
             <RouterLink to="/#" class="mini-nav__link">KALENDER</RouterLink>
@@ -31,7 +39,9 @@ import MegamenuComp from "./MegamenuComp.vue";
             <RouterLink to="/#" class="mini-nav__link">KUNDESERVICE</RouterLink>
           </li>
           <li>
-            <RouterLink to="/#" class="mini-nav__link">MIN ØNSKELISTE</RouterLink>
+            <RouterLink to="/#" class="mini-nav__link"
+              >MIN ØNSKELISTE</RouterLink
+            >
           </li>
           <li>
             <RouterLink to="/#" class="mini-nav__link">LOGIN</RouterLink>
@@ -56,7 +66,12 @@ import MegamenuComp from "./MegamenuComp.vue";
       </div>
       <div class="search-basket">
         <form class="header-searchform">
-          <input class="header__input" type="text" placeholder="" aria-label="søgefelt" />
+          <input
+            class="header__input"
+            type="text"
+            placeholder=""
+            aria-label="søgefelt"
+          />
           <button class="header__icon__search">
             <FontAwesomeIcon :icon="faMagnifyingGlass" aria-label="søgikon" />
           </button>
@@ -135,6 +150,7 @@ header {
       text-align: center;
       box-shadow: 0.3rem 0.3rem rgba(0, 0, 0, 0.25);
       white-space: nowrap;
+      cursor: pointer;
 
       .button {
         text-decoration: none;
