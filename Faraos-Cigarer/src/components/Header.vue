@@ -72,6 +72,11 @@ console.log(burgerMenuSelection)
         </RouterLink>
 
       <div class="header__controls">
+        <div 
+          class="overlay" 
+          :class="{ active: isMenuActive }"
+          @click="togglemenu">
+        </div>
         <nav id="hammenu__nav" class="off-screen-menu" :class="{ active: isMenuActive }">
           <div class="burgermenu__wrapper">
             <img alt="faraos logo" class="header__logo__burgermenu" src="../assets/image/faraos-cigarer-logo-svg.svg">
@@ -545,6 +550,25 @@ console.log(burgerMenuSelection)
 .burgermenu__section__inner--button:hover {
   text-decoration: underline;
 }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.5); 
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 1; 
+}
+
+.overlay.active {
+  opacity: 1;
+  pointer-events: auto; 
+}
+
 
 @media (min-width: 801px) {
   header {
