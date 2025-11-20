@@ -108,7 +108,7 @@ console.log(burgerMenuSelection)
                 <ul v-if="openCategory === categoryItem.id" class="burgermenu__section__boks" aria-label="informations boks">
                   <li v-for="item in categoryItem.items" :key="item.id" class="burgermenu__section__listitem">
                     <RouterLink :to="item.url" class="burgermenu__links">{{ item.title }}</RouterLink>
-                    <ul v-if="openCategory === categoryItem.id"> 
+                    <ul v-if="openCategory === categoryItem.id" class="burgermenu__links__inner__ul"> 
                       <li v-for="innersection in item.items" :key="innersection.id" class="burgermenu__section__listitem__inner">
                         <RouterLink :to="innersection.url" class="burgermenu__links__inner">{{ innersection.title }}</RouterLink>
                       </li>
@@ -360,14 +360,14 @@ console.log(burgerMenuSelection)
 }
 
 .burgermenu__section__listitem {
-  margin-left: 1rem;
+  margin-bottom: 2rem;
   list-style-type: none;
 }
 
 .burgermenu__section__listitem:first-of-type {
   list-style-type: none;
   margin: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .header {
@@ -513,8 +513,12 @@ console.log(burgerMenuSelection)
   text-decoration: none;
   font-family: $font-play;
   font-size: 1rem;
-  margin-left: 2rem;
   color: white;
+}
+
+.burgermenu__links__inner__ul {
+  margin-top: 1rem;
+  margin-left: 2rem
 }
 
 
