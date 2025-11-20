@@ -93,17 +93,17 @@ console.log(burgerMenuSelection)
 
         <div @click="toggleMenu" aria-label="burgermenu punkter">
           <button class="burgermenu__section--button" @click="toggleSection(categoryId)" aria-label="åben/luk felt">
-                {{ "KATEGORIER" }}
+              {{ "KATEGORIER" }}
               <FontAwesomeIcon :icon="faAngleDown" :class="{ 'rotate-180': openSection === categoryId }" class="burgermenu__ikon"
               aria-label="åben/luk pil" />
-            </button>
+          </button>
           <ul v-if="openSection === categoryId" id="menu" aria-label="burgermenu liste"> 
             <li v-for="categoryItem in burgerMenuSelection" :key="categoryItem.id" @click="toggleMenu" aria-label="burgermenu punkter">
-            <button class="burgermenu__section__inner--button" @click="toggleCategory(categoryItem.id)" aria-label="åben/luk felt">
+              <button class="burgermenu__section__inner--button" @click="toggleCategory(categoryItem.id)" aria-label="åben/luk felt">
                 {{ categoryItem.title }}
-              <FontAwesomeIcon :icon="faAngleDown" :class="{ 'rotate-180': openCategory === categoryItem.id }" class="burgermenu__ikon"
-              aria-label="åben/luk pil" />
-            </button>
+                <FontAwesomeIcon :icon="faAngleDown" :class="{ 'rotate-180': openCategory === categoryItem.id }" class="burgermenu__ikon"
+                aria-label="åben/luk pil" />
+              </button>
               <div class="listitem__controls">
                 <ul v-if="openCategory === categoryItem.id" class="burgermenu__section__boks" aria-label="informations boks">
                   <li v-for="item in categoryItem.items" :key="item.id" class="burgermenu__section__listitem">
@@ -122,15 +122,15 @@ console.log(burgerMenuSelection)
         
         <div v-for="section in burgerMenuDataTwo" :key="section.id" @click="toggleMenu" aria-label="burgermenu punkter">
           <button class="burgermenu__section--button" @click="toggleSection(section.id)" aria-label="åben/luk felt">
-                {{ section.title }}
-              <FontAwesomeIcon :icon="faAngleDown" :class="{ 'rotate-180': openSection === section.id }" class="burgermenu__ikon"
-              aria-label="åben/luk pil" />
-            </button>
+            {{ section.title }}
+            <FontAwesomeIcon :icon="faAngleDown" :class="{ 'rotate-180': openSection === section.id }" class="burgermenu__ikon"
+            aria-label="åben/luk pil" />
+          </button>
           <ul v-if="openSection === section.id" id="menu" aria-label="burgermenu liste"> 
             <li v-for="categoryItem in section.items" :key="categoryItem.id" @click="toggleMenu" aria-label="burgermenu punkter">
-            <p class="burgermenu__section__inner--button" @click="toggleCategory(categoryItem.id)" aria-label="åben/luk felt">
+              <p class="burgermenu__section__inner--button" @click="toggleCategory(categoryItem.id)" aria-label="åben/luk felt">
                 {{ categoryItem.title }}
-            </p>
+              </p>
             </li>
           </ul>
         </div>
