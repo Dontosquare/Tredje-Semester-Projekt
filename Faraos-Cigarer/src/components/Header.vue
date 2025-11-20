@@ -548,7 +548,7 @@ console.log(burgerMenuSelection)
   text-decoration: underline;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 801px) {
   header {
     display: none;
   }
