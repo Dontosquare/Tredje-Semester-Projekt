@@ -98,7 +98,7 @@ console.log(burgerMenuSelection)
               aria-label="åben/luk pil" />
             </button>
           <ul v-if="openSection === categoryId" id="header__menu" class="header__hammenu__list" aria-label="burgermenu liste"> 
-            <li v-for="categoryItem in burgerMenuSelection" :key="categoryItem.id" class="burgermenu__sektion" @click="toggleMenu" aria-label="burgermenu punkter">
+            <li v-for="categoryItem in burgerMenuSelection" :key="categoryItem.id" @click="toggleMenu" aria-label="burgermenu punkter">
             <button class="burgermenu__section__inner--button" @click="toggleCategory(categoryItem.id)" aria-label="åben/luk felt">
                 {{ categoryItem.title }}
               <FontAwesomeIcon :icon="faAngleDown" :class="{ 'rotate-180': openCategory === categoryItem.id }" class="burgermenu__ikon"
