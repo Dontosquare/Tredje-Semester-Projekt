@@ -107,6 +107,8 @@ const loadAllBooks = () => {
                 :class="{ 'cat-arrow-open': isOpen }" />
         </button>
 
+        <div class="decoration" :class="{ 'decoration-open': isOpen }"></div>
+
         <div class="megamenu" :class="{ 'megamenu-open': isOpen }">
             <div class="category-buttons">
                 <button @click="loadAllBooks">BØGER & TEGNESERIER</button>
@@ -279,7 +281,7 @@ const loadAllBooks = () => {
         padding: 2rem;
         padding-left: 1rem;
         display: flex;
-        gap: 1.5rem;
+        gap: 1rem;
         flex-wrap: wrap;
     }
 
