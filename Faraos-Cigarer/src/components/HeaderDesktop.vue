@@ -8,17 +8,19 @@ import MegamenuComp from "./MegamenuComp.vue";
 </script>
 
 <template>
-  <header>
-    <div class="header-logo-mini-wrapper">
-      <div class="header-logo">
+  <header aria-label="Sidehoved">
+    <div class="header-logo-mini-wrapper" aria-label="Logo og mini navigation">
+      <div class="header-logo" aria-label="Logo sektion">
         <RouterLink to="/#">
           <img
             :src="FaraosLogo"
             alt="Logo for faraos"
-            aria-label="Billed af faraos logo"
-        /></RouterLink>
+            aria-label="Logo for faraos"
+          />
+        </RouterLink>
       </div>
-      <div class="header-mini-navigation">
+
+      <div class="header-mini-navigation" aria-label="Mini navigation">
         <ul>
           <li>
             <RouterLink to="/#" class="mini-nav__link">SOCIALS</RouterLink>
@@ -50,8 +52,12 @@ import MegamenuComp from "./MegamenuComp.vue";
         </ul>
       </div>
     </div>
-    <div class="header-buttons-search-wrapper">
-      <div class="header-button_wrapper">
+
+    <div
+      class="header-buttons-search-wrapper"
+      aria-label="Navigation og søgning"
+    >
+      <div class="header-button_wrapper" aria-label="Hovednavigation">
         <ul>
           <MegamenuComp />
           <li>
@@ -65,21 +71,22 @@ import MegamenuComp from "./MegamenuComp.vue";
           </li>
         </ul>
       </div>
-      <div class="search-basket">
-        <form class="header-searchform">
+
+      <div class="search-basket" aria-label="Søgning og indkøbskurv">
+        <form class="header-searchform" aria-label="Søgefelt">
           <input
             class="header__input"
             type="text"
-            placeholder=""
+            placeholder="Søg"
             aria-label="søgefelt"
           />
-          <button class="header__icon__search">
+          <button class="header__icon__search" aria-label="søg">
             <FontAwesomeIcon :icon="faMagnifyingGlass" aria-label="søgikon" />
           </button>
         </form>
 
-        <div class="header__icon">
-          <button class="header__icon__basket">
+        <div class="header__icon" aria-label="Indkøbskurv ikon">
+          <button class="header__icon__basket" aria-label="åben indkøbskurv">
             <FontAwesomeIcon :icon="faCartShopping" aria-label="indkøbskurv" />
           </button>
         </div>
