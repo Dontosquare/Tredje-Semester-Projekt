@@ -98,6 +98,7 @@ onUnmounted(() => {
           :key="n"
           @click="goToSlide(n - 1)"
           :class="{ active: currentIndex === n - 1 }"
+          aria-label="Slideshow firkanter der indikerer hvilken slide du er på"
         ></button>
       </div>
 
