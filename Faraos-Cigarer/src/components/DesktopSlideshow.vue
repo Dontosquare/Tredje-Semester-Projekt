@@ -142,7 +142,7 @@ onUnmounted(() => {
 .slideshow__firkanter {
   display: flex;
   justify-content: flex-start;
-  gap: 0.48rem;
+  gap: 0.5rem;
   position: absolute;
   bottom: 3.75rem;
   left: 2rem;
