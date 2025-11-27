@@ -47,7 +47,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="slideshow__wrapper" aria-label="Wrapper">
+  <div class="slideshow__wrapper">
     <div class="slideshow" aria-label="Karrusel">
       <div v-show="currentIndex === 0" aria-label="1 ud af 6: karrusel">
         <img
