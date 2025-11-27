@@ -81,7 +81,7 @@ console.log(burgerMenuSelection)
           <div class="burgermenu__wrapper">
             <img alt="faraos logo" class="header__logo__burgermenu" src="../assets/image/faraos-cigarer-logo-svg.svg">
             <div class="burgermenu__buttons">
-              <div class="ham-menu__burgermenu" :class="{ active: isMenuActive }" @click="togglemenu" aria-label="burgermenu knap">
+              <div class="ham-menu__burgermenu" :class="{ active: isMenuActive }" @click="togglemenu">
                 <span></span>
                 <span></span>
                 <span></span>
