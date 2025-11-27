@@ -134,7 +134,7 @@ onUnmounted(() => {
 .slideshow__firkanter {
   display: flex;
   justify-content: flex-start;
-  gap: 0.48rem;
+  gap: 0.5rem;
   position: absolute;
   bottom: 3.75rem;
   left: 2rem;
@@ -142,8 +142,8 @@ onUnmounted(() => {
 }
 
 .slideshow__firkanter button {
-  width: 0.7rem;
-  height: 0.7rem;
+  width: 1rem;
+  height: 1rem;
   background-color: $color-newspaper-white;
   border-color: #000000;
   border-width: 0.06rem;
