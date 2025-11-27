@@ -91,12 +91,13 @@ onUnmounted(() => {
       />
     </div>
 
-    <div class="slideshow__firkanter" aria-label="Indikatorer">
+    <div class="slideshow__firkanter">
       <button
         v-for="n in totalSlides"
         :key="n"
         @click="goToSlide(n - 1)"
         :class="{ active: currentIndex === n - 1 }"
+        aria-label="Slideshow firkanter der indikerer hvilken slide du er på"
       ></button>
     </div>
 
