@@ -159,11 +159,11 @@ console.log(burgerMenuSelection)
 
         <form id="searchform">
         <input class="header__input" type="text" placeholder="" aria-label="søgefelt"/>
-        <button class="header__icon__search"><FontAwesomeIcon :icon="faMagnifyingGlass" aria-label="søgikon"/></button>
+        <button class="header__icon__search" aria-label="søgikon"><FontAwesomeIcon :icon="faMagnifyingGlass"/></button>
         </form>
 
         <div class="header__icon">
-        <button class="header__icon__basket"><FontAwesomeIcon :icon="faCartShopping" aria-label="indkøbskurv" /></button>
+        <button class="header__icon__basket" aria-label="indkøbskurv"><FontAwesomeIcon :icon="faCartShopping"/></button>
         </div>
       </div>
     </div>
